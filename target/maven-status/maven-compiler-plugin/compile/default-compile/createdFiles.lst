@@ -1,0 +1,9 @@
+com\job\util\JsonUtils.class
+com\job\pojo\User.class
+com\job\pojo\UserSession.class
+com\job\util\BaseData.class
+com\job\service\IUserService.class
+com\job\mapper\UserMapper.class
+com\job\util\HttpClientUtil.class
+com\job\service\impl\UserServiceImpl.class
+com\job\controller\UserController.class
