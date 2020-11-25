@@ -48,3 +48,4 @@
 0:0:0:0:0:0:0:1 - - [25/Nov/2020:15:58:44 +0800] "POST /user/wxLogin HTTP/1.1" 200 335 http-bio-81-exec-1 1170
 0:0:0:0:0:0:0:1 - - [25/Nov/2020:15:59:40 +0800] "POST /user/wxLogin HTTP/1.1" 200 335 http-bio-81-exec-1 1380
 0:0:0:0:0:0:0:1 - - [25/Nov/2020:16:07:56 +0800] "POST /user/wxLogin HTTP/1.1" 200 335 http-bio-81-exec-1 1024
+0:0:0:0:0:0:0:1 - - [25/Nov/2020:16:10:19 +0800] "POST /user/wxLogin HTTP/1.1" 200 332 http-bio-81-exec-1 1466
