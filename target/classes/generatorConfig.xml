@@ -61,6 +61,13 @@
 <!--        </table>-->
 
 
+<!--        <table tableName="job" domainObjectName="Job">-->
+<!--            <property name="useActualColumnNames" value="false"/>-->
+<!--            <property name="constructorBased" value="false"/>-->
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+
+
 
     </context>
 </generatorConfiguration>

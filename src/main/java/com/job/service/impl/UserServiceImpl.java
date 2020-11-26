@@ -8,15 +8,19 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements IUserService {
+
     @Autowired
     private UserMapper userMapper;
 
     @Override
-    public void userLogin(User user) {
+    public int userLogin(User user) {
         String openId = user.getOpenid();
         User user1 = userMapper.selectByOpenId(openId);
         if (user1 == null ) {
             userMapper.insert(user);
+            return user.getId();
         }
+        return user1.getId();
     }
+
 }

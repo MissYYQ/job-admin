@@ -1,9 +1,14 @@
-D:\ideaProject\jobforyou\src\main\java\com\job\util\HttpClientUtil.java
 D:\ideaProject\jobforyou\src\main\java\com\job\service\IUserService.java
+D:\ideaProject\jobforyou\src\main\java\com\job\service\IJobService.java
+D:\ideaProject\jobforyou\src\main\java\com\job\pojo\Job.java
+D:\ideaProject\jobforyou\src\main\java\com\job\pojo\UserSession.java
+D:\ideaProject\jobforyou\src\main\java\com\job\util\HttpClientUtil.java
+D:\ideaProject\jobforyou\src\main\java\com\job\mapper\JobMapper.java
 D:\ideaProject\jobforyou\src\main\java\com\job\util\BaseData.java
 D:\ideaProject\jobforyou\src\main\java\com\job\mapper\UserMapper.java
 D:\ideaProject\jobforyou\src\main\java\com\job\pojo\User.java
 D:\ideaProject\jobforyou\src\main\java\com\job\util\JsonUtils.java
+D:\ideaProject\jobforyou\src\main\java\com\job\service\impl\JobServiceImpl.java
 D:\ideaProject\jobforyou\src\main\java\com\job\service\impl\UserServiceImpl.java
-D:\ideaProject\jobforyou\src\main\java\com\job\pojo\UserSession.java
+D:\ideaProject\jobforyou\src\main\java\com\job\controller\JobController.java
 D:\ideaProject\jobforyou\src\main\java\com\job\controller\UserController.java

@@ -52,7 +52,8 @@ public class UserController {
         user.setCity(city);
 
         try {
-            userService.userLogin(user);
+            int id = userService.userLogin(user);
+            user.setId(id);
             baseData.setSta(1);
             baseData.setObj(user);
             baseData.setMsg("登录成功");
