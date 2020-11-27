@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb586755-f115-4ec6-b4b6-0e0b1ede1444" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/ICompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/ICompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/IJobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/IJobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/impl/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/impl/CompanyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/impl/JobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/impl/JobServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,7 +33,41 @@
     <favorites_list name="jobforyou" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1232">
+              <caret line="79" column="14" lean-forward="true" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+              <folding>
+                <element signature="n#delete#0;n#mapper#0;n#!!top" />
+                <element signature="n#insert#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" />
+                <element signature="n#select#3;n#mapper#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CompanyMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="55" />
+              <folding>
+                <element signature="n#delete#0;n#mapper#0;n#!!top" />
+                <element signature="n#insert#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,16 +107,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/IUserService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/pojo/Job.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/controller/CompanyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/CompanyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/mapper/CompanyMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/CompanyMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/ICompanyService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/IJobService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/JobServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/mapper/JobMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/CompanyMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/mapper/CompanyMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/pojo/Job.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" />
       </list>
     </option>
@@ -134,10 +159,10 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="641" />
-    <option name="y" value="36" />
-    <option name="width" value="880" />
-    <option name="height" value="1039" />
+    <option name="x" value="106" />
+    <option name="y" value="542" />
+    <option name="width" value="1819" />
+    <option name="height" value="533" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -148,8 +173,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,6 +236,16 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="job" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jobforyou" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jobforyou" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="job" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jobforyou" type="b2602c69:ProjectViewProjectNode" />
@@ -342,7 +377,10 @@
       <workItem from="1606371496861" duration="2466000" />
       <workItem from="1606374020426" duration="3725000" />
       <workItem from="1606395218185" duration="4837000" />
-      <workItem from="1606437862219" duration="5447000" />
+      <workItem from="1606437862219" duration="6078000" />
+      <workItem from="1606448170155" duration="594000" />
+      <workItem from="1606459139714" duration="4893000" />
+      <workItem from="1606464716989" duration="2206000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1606292854469</created>
@@ -358,11 +396,18 @@
       <option name="project" value="LOCAL" />
       <updated>1606383047260</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="333">
+      <created>1606444545332</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606444545332</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60083000" />
+    <option name="totallyTimeSpent" value="68407000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -375,8 +420,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22252011" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24664879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -384,7 +430,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46774194" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27859238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2489019" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -413,7 +459,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="111" />
     <MESSAGE value="222" />
-    <option name="LAST_COMMIT_MESSAGE" value="222" />
+    <MESSAGE value="333" />
+    <option name="LAST_COMMIT_MESSAGE" value="333" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
@@ -661,78 +708,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/pojo/Job.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/mapper/CompanyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/impl/CompanyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="35" column="66" lean-forward="true" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
-          <folding>
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/ICompanyService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/CompanyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="e#931#932#0" expanded="true" />
-            <element signature="e#960#961#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CompanyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="67" selection-start-line="67" selection-end-line="69" selection-end-column="27" />
-          <folding>
-            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="76" column="27" lean-forward="true" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
-          <folding>
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -765,10 +746,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/CompanyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        <state relative-caret-position="160">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/impl/CompanyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/pojo/Job.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/mapper/CompanyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CompanyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="55" />
+          <folding>
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="79" column="14" lean-forward="true" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+          <folding>
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
