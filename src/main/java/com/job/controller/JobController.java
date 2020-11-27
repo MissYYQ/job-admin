@@ -29,4 +29,26 @@ public class JobController {
         Job job = jobService.getOne(id);
         return job;
     }
+
+    @ResponseBody
+    @RequestMapping("/jobForCompany")
+    public List<Job> getJobByCompanyId(int id){
+        List<Job> jobList = jobService.getJobByCompanyId(id);
+        return jobList;
+    }
+
+    @ResponseBody
+    @RequestMapping("/addPageviews")
+    public void addPageviews(int id){
+        System.out.println("job id："+id);
+        jobService.addPageviews(id);
+    }
+
+    @ResponseBody
+    @RequestMapping("/hotJob")
+    public List<Job> hotJob(){
+        List<Job> jobList = jobService.getHotJob();
+        return jobList;
+    }
+
 }

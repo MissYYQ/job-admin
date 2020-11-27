@@ -25,4 +25,21 @@ public class JobServiceImpl  implements IJobService {
         Job job = jobMapper.selectByPrimaryKey(id);
         return job;
     }
+
+    @Override
+    public List<Job> getJobByCompanyId(int id) {
+        List<Job> jobList = jobMapper.selectJobByCompanyId(id);
+        return jobList;
+    }
+
+    @Override
+    public void addPageviews(int id) {
+        jobMapper.addPageviews(id);
+    }
+
+    @Override
+    public List<Job> getHotJob() {
+        List<Job> jobList = jobMapper.selectHotJob();
+        return jobList;
+    }
 }

@@ -67,6 +67,12 @@
 <!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
 <!--        </table>-->
 
+<!--        <table tableName="company" domainObjectName="Company">-->
+<!--            <property name="useActualColumnNames" value="false"/>-->
+<!--            <property name="constructorBased" value="false"/>-->
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+
 
 
     </context>
