@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.job.mapper.CompanyMapper" >
+  <resultMap id="BaseResultMap" type="com.job.pojo.Company" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="logoUrl" property="logourl" jdbcType="VARCHAR" />
+    <result column="size" property="size" jdbcType="VARCHAR" />
+    <result column="financingStage" property="financingstage" jdbcType="VARCHAR" />
+    <result column="region" property="region" jdbcType="VARCHAR" />
+    <result column="detailedAddress" property="detailedaddress" jdbcType="VARCHAR" />
+    <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+    <result column="workTime" property="worktime" jdbcType="VARCHAR" />
+    <result column="welfare" property="welfare" jdbcType="VARCHAR" />
+    <result column="industry" property="industry" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="pageviews" property="pageviews" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from company
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.job.pojo.Company" useGeneratedKeys="true" keyProperty="id" >
+    insert into company (name, email, logoUrl, 
+      size, financingStage, region, 
+      detailedAddress, introduction, workTime, 
+      welfare, industry, user_id, 
+      pageviews)
+    values (#{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{logourl,jdbcType=VARCHAR}, 
+      #{size,jdbcType=VARCHAR}, #{financingstage,jdbcType=VARCHAR}, #{region,jdbcType=VARCHAR}, 
+      #{detailedaddress,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, #{worktime,jdbcType=VARCHAR}, 
+      #{welfare,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{pageviews,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.job.pojo.Company" >
+    update company
+    set name = #{name,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      logoUrl = #{logourl,jdbcType=VARCHAR},
+      size = #{size,jdbcType=VARCHAR},
+      financingStage = #{financingstage,jdbcType=VARCHAR},
+      region = #{region,jdbcType=VARCHAR},
+      detailedAddress = #{detailedaddress,jdbcType=VARCHAR},
+      introduction = #{introduction,jdbcType=VARCHAR},
+      workTime = #{worktime,jdbcType=VARCHAR},
+      welfare = #{welfare,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      pageviews = #{pageviews,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="addPageviews">
+    update company
+    set pageviews = pageviews + 1
+    where id = #{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select *
+    from company
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select *
+    from company
+  </select>
+  <select id="selectHotCompany" resultType="com.job.pojo.Company">
+    select *
+    from company
+    order by pageviews desc
+  </select>
+</mapper>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.job.mapper.JobMapper" >
+  <resultMap id="BaseResultMap" type="com.job.pojo.Job" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="salary" property="salary" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="experience" property="experience" jdbcType="CHAR" />
+    <result column="degree" property="degree" jdbcType="CHAR" />
+    <result column="claim" property="claim" jdbcType="VARCHAR" />
+    <result column="duty" property="duty" jdbcType="VARCHAR" />
+    <result column="keyWords" property="keywords" jdbcType="VARCHAR" />
+    <result column="industry" property="industry" jdbcType="VARCHAR" />
+    <result column="kind" property="kind" jdbcType="BIT" />
+    <result column="number" property="number" jdbcType="INTEGER" />
+    <result column="deadline" property="deadline" jdbcType="DATE" />
+    <result column="company_id" property="companyId" jdbcType="INTEGER" />
+    <result column="pageviews" property="pageviews" jdbcType="INTEGER" />
+    <!--  关联company表-->
+    <association property="company" javaType="com.job.pojo.Company" columnPrefix="c_">
+      <result column="logoUrl" property="logourl" />
+      <result column="name" property="name" />
+      <result column="industry" property="industry" />
+      <result column="size" property="size" />
+      <result column="financingStage" property="financingstage" />
+      <result column="region" property="region" />
+      <result column="detailedAddress" property="detailedaddress" />
+      <result column="welfare" property="welfare" />
+    </association>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from job
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.job.pojo.Job" useGeneratedKeys="true" keyProperty="id" >
+    insert into job (name, salary, city, 
+      experience, degree, claim, 
+      duty, keyWords, industry, 
+      kind, number, deadline, company_id, pageviews
+      )
+    values (#{name}, #{salary}, #{city},
+      #{experience}, #{degree}, #{claim},
+      #{duty}, #{keywords}, #{industry},
+      #{kind}, #{number}, #{deadline}, #{companyId}, #{pageviews}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.job.pojo.Job" >
+    update job
+    set name = #{name},
+      salary = #{salary},
+      city = #{city},
+      experience = #{experience},
+      degree = #{degree},
+      claim = #{claim},
+      duty = #{duty},
+      keyWords = #{keywords},
+      industry = #{industry},
+      kind = #{kind},
+      number = #{number},
+      deadline = #{deadline},
+      company_id = #{companyId},
+      pageviews = #{pageviews}
+    where id = #{id}
+  </update>
+  <update id="addPageviews">
+    update job
+    set pageviews = pageviews + 1
+    where id = #{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select j.*,
+           c.`name` as c_name,
+           c.industry as c_industry,
+           c.size as c_size,
+           c.financingStage as c_financingstage,
+           c.region as c_region,
+           c.detailedAddress as c_detailedaddress,
+           c.welfare as c_welfare
+    from job j
+    left join company c
+    on j.company_id = c.id
+    where j.id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select j.*,
+           c.logoUrl as c_logourl,
+           c.`name` as c_name,
+           c.industry as c_industry,
+           c.size as c_size,
+           c.financingStage as c_financingstage
+    from job j
+    left join company c
+    on j.company_id = c.id
+  </select>
+  <select id="selectJobByCompanyId" resultType="com.job.pojo.Job">
+    select *
+    from job
+    where company_id = #{id}
+  </select>
+  <select id="selectHotJob" resultType="com.job.pojo.Job">
+    select *
+    from job
+    order by pageviews desc
+  </select>
+</mapper>
