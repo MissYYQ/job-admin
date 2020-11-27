@@ -19,4 +19,6 @@ public interface JobMapper {
     void addPageviews(int id);
 
     List<Job> selectHotJob();
+
+    List<Job> selectSearchJob(String key);
 }

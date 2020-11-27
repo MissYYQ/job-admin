@@ -15,4 +15,6 @@ public interface IJobService {
     void addPageviews(int id);
 
     List<Job> getHotJob();
+
+    List<Job> getSearchJob(String key);
 }
