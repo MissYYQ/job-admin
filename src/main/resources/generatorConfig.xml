@@ -71,6 +71,12 @@
 <!--            <property name="useActualColumnNames" value="false"/>-->
 <!--            <property name="constructorBased" value="false"/>-->
 <!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--        </table>        -->
+
+<!--        <table tableName="seminar" domainObjectName="Seminar">-->
+<!--            <property name="useActualColumnNames" value="false"/>-->
+<!--            <property name="constructorBased" value="false"/>-->
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
 <!--        </table>-->
 
 

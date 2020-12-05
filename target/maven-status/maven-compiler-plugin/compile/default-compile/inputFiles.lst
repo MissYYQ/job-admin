@@ -3,7 +3,11 @@ D:\ideaProject\jobforyou\src\main\java\com\job\service\IUserService.java
 D:\ideaProject\jobforyou\src\main\java\com\job\service\ICompanyService.java
 D:\ideaProject\jobforyou\src\main\java\com\job\service\IJobService.java
 D:\ideaProject\jobforyou\src\main\java\com\job\pojo\Job.java
+D:\ideaProject\jobforyou\src\main\java\com\job\service\ISeminarService.java
+D:\ideaProject\jobforyou\src\main\java\com\job\mapper\SeminarMapper.java
+D:\ideaProject\jobforyou\src\main\java\com\job\pojo\Seminar.java
 D:\ideaProject\jobforyou\src\main\java\com\job\pojo\UserSession.java
+D:\ideaProject\jobforyou\src\main\java\com\job\service\impl\SeminarServiceImpl.java
 D:\ideaProject\jobforyou\src\main\java\com\job\util\HttpClientUtil.java
 D:\ideaProject\jobforyou\src\main\java\com\job\mapper\JobMapper.java
 D:\ideaProject\jobforyou\src\main\java\com\job\util\BaseData.java
@@ -15,5 +19,6 @@ D:\ideaProject\jobforyou\src\main\java\com\job\util\JsonUtils.java
 D:\ideaProject\jobforyou\src\main\java\com\job\service\impl\CompanyServiceImpl.java
 D:\ideaProject\jobforyou\src\main\java\com\job\service\impl\JobServiceImpl.java
 D:\ideaProject\jobforyou\src\main\java\com\job\service\impl\UserServiceImpl.java
+D:\ideaProject\jobforyou\src\main\java\com\job\controller\SeminarController.java
 D:\ideaProject\jobforyou\src\main\java\com\job\controller\JobController.java
 D:\ideaProject\jobforyou\src\main\java\com\job\controller\UserController.java

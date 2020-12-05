@@ -1,4 +1,6 @@
+com\job\mapper\SeminarMapper.class
 com\job\pojo\UserSession.class
+com\job\controller\SeminarController.class
 com\job\mapper\JobMapper.class
 com\job\util\BaseData.class
 com\job\service\IUserService.class
@@ -8,7 +10,10 @@ com\job\service\impl\JobServiceImpl.class
 com\job\util\JsonUtils.class
 com\job\pojo\User.class
 com\job\service\IJobService.class
+com\job\service\impl\SeminarServiceImpl.class
 com\job\mapper\UserMapper.class
 com\job\util\HttpClientUtil.class
 com\job\service\impl\UserServiceImpl.class
+com\job\pojo\Seminar.class
 com\job\controller\UserController.class
+com\job\service\ISeminarService.class
