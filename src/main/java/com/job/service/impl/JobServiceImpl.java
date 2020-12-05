@@ -48,4 +48,10 @@ public class JobServiceImpl  implements IJobService {
         List<Job> jobList = jobMapper.selectSearchJob(key);
         return jobList;
     }
+
+    @Override
+    public List<Job> getSearchHotJob(String key) {
+        List<Job> jobList = jobMapper.selectSearchHotJob(key);
+        return jobList;
+    }
 }

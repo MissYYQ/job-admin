@@ -43,5 +43,12 @@ public class CompanyController {
         return companyList;
     }
 
+    @ResponseBody
+    @RequestMapping("/hotCompanySearch")
+    public List<Company> searchHotCompany(String key){
+        List<Company> companyList = companyService.getSearchHotCompany(key);
+        return companyList;
+    }
+
 
 }

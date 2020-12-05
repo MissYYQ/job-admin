@@ -18,4 +18,5 @@ public interface CompanyMapper {
 
     List<Company> selectHotCompany();
 
+    List<Company> selsectSearchHotCompany(String key);
 }

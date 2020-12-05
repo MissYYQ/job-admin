@@ -36,4 +36,10 @@ public class CompanyServiceImpl implements ICompanyService {
         List<Company> companyList = companyMapper.selectHotCompany();
         return companyList;
     }
+
+    @Override
+    public List<Company> getSearchHotCompany(String key) {
+        List<Company> companyList = companyMapper.selsectSearchHotCompany(key);
+        return companyList;
+    }
 }

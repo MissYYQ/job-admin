@@ -98,10 +98,17 @@
     from job
     where company_id = #{id}
   </select>
-  <select id="selectHotJob" resultType="com.job.pojo.Job">
-    select *
-    from job
-    order by pageviews desc
+  <select id="selectHotJob" resultMap="BaseResultMap">
+    select j.*,
+           c.logoUrl as c_logourl,
+           c.`name` as c_name,
+           c.industry as c_industry,
+           c.size as c_size,
+           c.financingStage as c_financingstage
+    from job j
+    left join company c
+    on j.company_id = c.id
+    order by j.pageviews desc
   </select>
   <select id="selectSearchJob" resultMap="BaseResultMap">
     select j.*,
@@ -114,5 +121,18 @@
     left join company c
     on j.company_id = c.id
     where j.name like concat('%',#{key},'%') or c.name like concat('%',#{key},'%')
+  </select>
+  <select id="selectSearchHotJob" resultMap="BaseResultMap">
+    select j.*,
+           c.logoUrl as c_logourl,
+           c.`name` as c_name,
+           c.industry as c_industry,
+           c.size as c_size,
+           c.financingStage as c_financingstage
+    from job j
+    left join company c
+    on j.company_id = c.id
+    where j.name like concat('%',#{key},'%')
+    order by j.pageviews desc
   </select>
 </mapper>

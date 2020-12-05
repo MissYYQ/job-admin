@@ -69,4 +69,9 @@
     from company
     order by pageviews desc
   </select>
+  <select id="selsectSearchHotCompany" resultType="com.job.pojo.Company">
+    select *
+    from company
+    where name like concat('%',#{key},'%')
+  </select>
 </mapper>

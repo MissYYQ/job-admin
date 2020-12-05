@@ -14,4 +14,5 @@ public interface ICompanyService {
 
     List<Company> getHotCompany();
 
+    List<Company> getSearchHotCompany(String key);
 }

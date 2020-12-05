@@ -31,6 +31,13 @@ public class JobController {
     }
 
     @ResponseBody
+    @RequestMapping("/hotJobSearch")
+    public List<Job> searchHotJob(String key){
+        List<Job> jobList = jobService.getSearchHotJob(key);
+        return jobList;
+    }
+
+    @ResponseBody
     @RequestMapping("/one")
     public Job getOne(int id){
         Job job = jobService.getOne(id);

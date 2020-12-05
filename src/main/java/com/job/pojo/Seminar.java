@@ -2,8 +2,6 @@ package com.job.pojo;
 
 import lombok.*;
 
-import java.util.Date;
-
 @Setter
 @Getter
 @ToString
@@ -17,7 +15,7 @@ public class Seminar {
 
     private String location;
 
-    private Date date;
+    private String date;
 
     private String time;
 
