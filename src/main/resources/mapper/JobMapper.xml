@@ -28,6 +28,12 @@
       <result column="detailedAddress" property="detailedaddress" />
       <result column="welfare" property="welfare" />
     </association>
+    <!--  关联collectionjob表-->
+    <association property="collectionjob" javaType="com.job.pojo.CollectionJob" >
+      <result column="user_id" property="userId" />
+      <result column="job_id" property="jobId" />
+    </association>
+
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from job
@@ -134,5 +140,21 @@
     on j.company_id = c.id
     where j.name like concat('%',#{key},'%')
     order by j.pageviews desc
+  </select>
+  <select id="selectCollectJob" resultMap="BaseResultMap">
+    select j.*,
+       c.logoUrl as c_logourl,
+       c.`name` as c_name,
+       c.industry as c_industry,
+       c.size as c_size,
+       c.financingStage as c_financingstage
+    from job j
+    left join company c
+    on j.company_id = c.id
+    where j.id in(
+                  select cj.job_id
+                  from collectionjob cj
+                  where cj.user_id = #{userId}
+                 )
   </select>
 </mapper>

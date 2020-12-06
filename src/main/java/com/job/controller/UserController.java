@@ -24,7 +24,6 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/wxLogin")
     public BaseData login(String code,String nickName,String gender,String avatarUrl,String country,String province,String city){
-
         BaseData baseData = new BaseData();
 
         String appId = "wxcc92e6ab69b5576a";

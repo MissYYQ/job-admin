@@ -64,4 +64,11 @@ public class JobController {
         return jobList;
     }
 
+    @ResponseBody
+    @RequestMapping("/collectJob")
+    public List<Job> collectJob(Integer userId){
+        List<Job> jobList = jobService.getCollectJob(userId);
+        return jobList;
+    }
+
 }

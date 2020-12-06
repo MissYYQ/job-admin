@@ -34,4 +34,10 @@ public class CollectionJobServiceImpl implements ICollectionJobService {
     public void uncollectJob(Integer userId, Integer jobId) {
         collectionJobMapper.delete(userId, jobId);
     }
+
+    @Override
+    public int jobCount(Integer userId) {
+        int count = collectionJobMapper.selectjobCount(userId);
+        return count;
+    }
 }

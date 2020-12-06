@@ -19,4 +19,6 @@ public interface IJobService {
     List<Job> getSearchJob(String key);
 
     List<Job> getSearchHotJob(String key);
+
+    List<Job> getCollectJob(Integer userId);
 }

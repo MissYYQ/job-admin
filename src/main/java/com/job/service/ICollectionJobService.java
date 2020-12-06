@@ -7,4 +7,6 @@ public interface ICollectionJobService {
     void collectJob(Integer userId, Integer jobId);
 
     void uncollectJob(Integer userId, Integer jobId);
+
+    int jobCount(Integer userId);
 }

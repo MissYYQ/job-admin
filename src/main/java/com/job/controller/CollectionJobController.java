@@ -31,4 +31,11 @@ public class CollectionJobController {
     public void uncollectJob(Integer userId,Integer jobId){
         collectionJobService.uncollectJob(userId,jobId);
     }
+
+    @ResponseBody
+    @RequestMapping("/jobCount")
+    public int jobCount(Integer userId){
+        int jobCount = collectionJobService.jobCount(userId);
+        return jobCount;
+    }
 }

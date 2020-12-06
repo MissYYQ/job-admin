@@ -43,4 +43,6 @@ public class Job {
 
     private Company company;
 
+    private CollectionJob collectionjob;
+
 }
