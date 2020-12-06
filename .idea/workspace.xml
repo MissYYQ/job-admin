@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb586755-f115-4ec6-b4b6-0e0b1ede1444" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/DeliveryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/job/service/IDeliveryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/job/service/impl/DeliveryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/controller/CollectionJobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/CollectionJobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/mapper/JobMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/mapper/JobMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/pojo/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/pojo/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/IJobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/IJobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/impl/JobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/impl/JobServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
@@ -53,7 +41,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
@@ -75,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-218">
@@ -372,9 +360,6 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpringGeneralSettings">
-    <option name="allowAutoConfigurationMode" value="true" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -412,7 +397,7 @@
       <workItem from="1607240621977" duration="3048000" />
       <workItem from="1607244015028" duration="3206000" />
       <workItem from="1607253139711" duration="7012000" />
-      <workItem from="1607260980088" duration="2335000" />
+      <workItem from="1607260980088" duration="2400000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1606292854469</created>
@@ -491,11 +476,18 @@
       <option name="project" value="LOCAL" />
       <updated>1607247419064</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="投递-未完">
+      <created>1607263363069</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607263363069</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109409000" />
+    <option name="totallyTimeSpent" value="109474000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,7 +500,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26206434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -556,7 +547,8 @@
     <MESSAGE value="888" />
     <MESSAGE value="职位收藏" />
     <MESSAGE value="999" />
-    <option name="LAST_COMMIT_MESSAGE" value="999" />
+    <MESSAGE value="投递-未完" />
+    <option name="LAST_COMMIT_MESSAGE" value="投递-未完" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/StudentController.java" />
@@ -915,13 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-218">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -939,6 +924,13 @@
             <element signature="n#select#5;n#mapper#0;n#!!top" />
             <element signature="n#select#6;n#mapper#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218">
+          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
         </state>
       </provider>
     </entry>
