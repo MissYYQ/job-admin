@@ -54,32 +54,7 @@
 
         <!--配置表名 和 实体类名-->
 
-<!--        <table tableName="user" domainObjectName="User">-->
-<!--            <property name="useActualColumnNames" value="false"/>-->
-<!--            <property name="constructorBased" value="false"/>-->
-<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
-<!--        </table>-->
-
-
-<!--        <table tableName="job" domainObjectName="Job">-->
-<!--            <property name="useActualColumnNames" value="false"/>-->
-<!--            <property name="constructorBased" value="false"/>-->
-<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
-<!--        </table>-->
-
-<!--        <table tableName="company" domainObjectName="Company">-->
-<!--            <property name="useActualColumnNames" value="false"/>-->
-<!--            <property name="constructorBased" value="false"/>-->
-<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
-<!--        </table>        -->
-
-<!--        <table tableName="seminar" domainObjectName="Seminar">-->
-<!--            <property name="useActualColumnNames" value="false"/>-->
-<!--            <property name="constructorBased" value="false"/>-->
-<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
-<!--        </table>        -->
-
-<!--        <table tableName="jobstrategy" domainObjectName="JobStrategy">-->
+<!--        <table tableName="collectionjob" domainObjectName="CollectionJob">-->
 <!--            <property name="useActualColumnNames" value="false"/>-->
 <!--            <property name="constructorBased" value="false"/>-->
 <!--            <generatedKey column="id" sqlStatement="JDBC"/>-->

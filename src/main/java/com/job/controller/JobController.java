@@ -54,7 +54,6 @@ public class JobController {
     @ResponseBody
     @RequestMapping("/addPageviews")
     public void addPageviews(int id){
-        System.out.println("job id："+id);
         jobService.addPageviews(id);
     }
 
