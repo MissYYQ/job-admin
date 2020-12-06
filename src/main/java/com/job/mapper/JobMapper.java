@@ -25,4 +25,6 @@ public interface JobMapper {
     List<Job> selectSearchHotJob(String key);
 
     List<Job> selectCollectJob(Integer userId);
+
+    List<Job> selectDeliveryJob(Integer userId);
 }

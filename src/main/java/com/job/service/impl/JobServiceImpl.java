@@ -60,4 +60,10 @@ public class JobServiceImpl  implements IJobService {
         List<Job> jobList = jobMapper.selectCollectJob(userId);
         return jobList;
     }
+
+    @Override
+    public List<Job> getDeliveryJob(Integer userId) {
+        List<Job> jobList = jobMapper.selectDeliveryJob(userId);
+        return jobList;
+    }
 }

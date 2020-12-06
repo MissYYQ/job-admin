@@ -45,4 +45,6 @@ public class Job {
 
     private CollectionJob collectionjob;
 
+    private Delivery delivery;
+
 }

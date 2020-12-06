@@ -22,14 +22,18 @@ public class CollectionJobController {
 
     @ResponseBody
     @RequestMapping("/collectJob")
-    public void collectJob(Integer userId,Integer jobId){
+    public boolean collectJob(Integer userId,Integer jobId){
         collectionJobService.collectJob(userId,jobId);
+        boolean collection = collectionJobService.isCollection(userId, jobId);
+        return collection;
     }
 
     @ResponseBody
     @RequestMapping("/uncollectJob")
-    public void uncollectJob(Integer userId,Integer jobId){
+    public boolean uncollectJob(Integer userId,Integer jobId){
         collectionJobService.uncollectJob(userId,jobId);
+        boolean collection = collectionJobService.isCollection(userId, jobId);
+        return collection;
     }
 
     @ResponseBody
@@ -38,4 +42,5 @@ public class CollectionJobController {
         int jobCount = collectionJobService.jobCount(userId);
         return jobCount;
     }
+
 }
