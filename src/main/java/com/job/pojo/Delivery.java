@@ -20,5 +20,4 @@ public class Delivery {
 
     private Boolean status;
 
-
 }
