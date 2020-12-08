@@ -51,14 +51,13 @@
         </javaClientGenerator>
 
 
-
         <!--配置表名 和 实体类名-->
 
-        <table tableName="delivery" domainObjectName="Delivery">
-            <property name="useActualColumnNames" value="false"/>
-            <property name="constructorBased" value="false"/>
-            <generatedKey column="id" sqlStatement="JDBC"/>
-        </table>
+<!--        <table tableName="student" domainObjectName="Student">-->
+<!--            <property name="useActualColumnNames" value="false"/>-->
+<!--            <property name="constructorBased" value="false"/>-->
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
 
 
 

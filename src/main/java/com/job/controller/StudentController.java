@@ -18,6 +18,13 @@ public class StudentController {
     private IStudentService studentService;
 
     @ResponseBody
+    @RequestMapping("/one")
+    public Student getOne(Integer userId){
+        Student student = studentService.searchByUserId(userId);
+        return student;
+    }
+
+    @ResponseBody
     @RequestMapping("/edit")
     public Student edit(Integer userId, String resume){
 
@@ -28,7 +35,7 @@ public class StudentController {
         student.setBirthday(jsonObject.getString("birthday"));
         student.setSkills(jsonObject.getString("skills"));
         student.setHometown(jsonObject.getString("hometown"));
-        student.setEmail(jsonObject.getString("mailbox"));
+        student.setEmail(jsonObject.getString("email"));
         student.setEducation(jsonObject.getString("education"));
         student.setPhone(jsonObject.getString("phone"));
         student.setHonor(jsonObject.getString("honor"));
@@ -36,8 +43,7 @@ public class StudentController {
         student.setPolitical(jsonObject.getString("political"));
         student.setAvatar(jsonObject.getString("avatar"));
 
-        Student student1 = studentService.searchByUserId(userId);
-        if (student1 == null){
+        if (studentService.searchByUserId(userId) == null){
             //插入
             studentService.insertStudent(student);
         } else {
