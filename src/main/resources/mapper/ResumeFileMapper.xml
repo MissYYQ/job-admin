@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.job.mapper.ResumeFileMapper" >
+  <resultMap id="BaseResultMap" type="com.job.pojo.ResumeFile" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="path" property="path" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from resumefile
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.job.pojo.ResumeFile" useGeneratedKeys="true" keyProperty="id" >
+    insert into resumefile (name, path, user_id)
+    values (#{name,jdbcType=VARCHAR}, #{path,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.job.pojo.ResumeFile" >
+    update resumefile
+    set name = #{name,jdbcType=VARCHAR},
+      path = #{path,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByUserId" parameterType="com.job.pojo.ResumeFile">
+    update resumefile
+    set name = #{name},
+      path = #{path}
+    where user_id = #{userId}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select *
+    from resumefile
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select *
+    from resumefile
+  </select>
+  <select id="selectByUserId" resultType="com.job.pojo.ResumeFile">
+    select *
+    from resumefile
+    where user_id = #{userId}
+  </select>
+</mapper>
