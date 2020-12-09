@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.job.mapper.InterviewMapper" >
+  <resultMap id="BaseResultMap" type="com.job.pojo.Interview" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="date" property="date" jdbcType="CHAR" />
+    <result column="time" property="time" jdbcType="CHAR" />
+    <result column="region" property="region" jdbcType="VARCHAR" />
+    <result column="detailedAddress" property="detailedaddress" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="job_id" property="jobId" jdbcType="INTEGER" />
+    <!--  关联job表-->
+    <association property="job" javaType="com.job.pojo.Job" columnPrefix="j_">
+      <result column="name" property="name" jdbcType="VARCHAR" />
+    </association>
+    <!--  关联company表-->
+    <association property="company" javaType="com.job.pojo.Company" columnPrefix="c_">
+      <result column="name" property="name" jdbcType="VARCHAR" />
+    </association>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from interview
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.job.pojo.Interview" useGeneratedKeys="true" keyProperty="id" >
+    insert into interview (date, time, region, 
+      detailedAddress, user_id, job_id
+      )
+    values (#{date,jdbcType=CHAR}, #{time,jdbcType=CHAR}, #{region,jdbcType=VARCHAR}, 
+      #{detailedaddress,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{jobId,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.job.pojo.Interview" >
+    update interview
+    set date = #{date,jdbcType=CHAR},
+      time = #{time,jdbcType=CHAR},
+      region = #{region,jdbcType=VARCHAR},
+      detailedAddress = #{detailedaddress,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      job_id = #{jobId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select id, date, time, region, detailedAddress, user_id, job_id
+    from interview
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, date, time, region, detailedAddress, user_id, job_id
+    from interview
+  </select>
+  <select id="selectByUserId" resultMap="BaseResultMap">
+    select i.*,
+           j.name as j_name,
+           c.name as c_name
+    from interview i
+    left join job j
+    on i.job_id = j.id
+    left join company c
+    on j.company_id = c.id
+    where i.user_id = #{userId}
+  </select>
+  <select id="selectCountByUserId" resultType="java.lang.Integer">
+    select count(*)
+    from interview
+    where user_id = #{userId}
+  </select>
+</mapper>
