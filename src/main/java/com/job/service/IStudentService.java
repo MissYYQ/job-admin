@@ -6,8 +6,9 @@ public interface IStudentService {
 
     Student searchByUserId(Integer userId);
 
-    void insertStudent(Student student);
+    int insertStudent(Student student);
 
-    void deleteStudentByUserId(Integer userId);
+    int deleteStudentByUserId(Integer userId);
 
+    int updateStudent(Student student);
 }

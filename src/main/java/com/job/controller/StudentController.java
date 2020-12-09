@@ -26,10 +26,10 @@ public class StudentController {
 
     @ResponseBody
     @RequestMapping("/edit")
-    public Student edit(Integer userId, String resume){
+    public int edit(Integer userId, String resume){
 
-        Student student = new Student();
         JSONObject jsonObject = JSON.parseObject(resume);
+        Student student = new Student();
 
         student.setUserId(userId);
         student.setBirthday(jsonObject.getString("birthday"));
@@ -45,12 +45,10 @@ public class StudentController {
 
         if (studentService.searchByUserId(userId) == null){
             //插入
-            studentService.insertStudent(student);
+             return studentService.insertStudent(student);
         } else {
-            //删除再插入（更新）
-            studentService.deleteStudentByUserId(userId);
-            studentService.insertStudent(student);
+            //更新
+             return studentService.updateStudent(student);
         }
-        return studentService.searchByUserId(userId);
     }
 }

@@ -19,12 +19,20 @@ public class StudentServiceImpl implements IStudentService {
     }
 
     @Override
-    public void insertStudent(Student student) {
-        studentMapper.insert(student);
+    public int insertStudent(Student student) {
+        int n = studentMapper.insert(student);
+        return n;
     }
 
     @Override
-    public void deleteStudentByUserId(Integer userId) {
-        studentMapper.deleteByUserId(userId);
+    public int deleteStudentByUserId(Integer userId) {
+        int n = studentMapper.deleteByUserId(userId);
+        return n;
+    }
+
+    @Override
+    public int updateStudent(Student student) {
+        int n = studentMapper.updateByUserId(student);
+        return n;
     }
 }
