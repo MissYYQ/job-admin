@@ -53,7 +53,7 @@
 
         <!--配置表名 和 实体类名-->
 
-<!--        <table tableName="intentionJob" domainObjectName="IntentionJob">-->
+<!--        <table tableName="experience" domainObjectName="Experience">-->
 <!--            <property name="useActualColumnNames" value="false"/>-->
 <!--            <property name="constructorBased" value="false"/>-->
 <!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
