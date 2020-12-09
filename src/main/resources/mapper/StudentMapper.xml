@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.job.mapper.StudentMapper" >
+  <resultMap id="BaseResultMap" type="com.job.pojo.Student" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="avatar" property="avatar" jdbcType="VARCHAR" />
+    <result column="birthday" property="birthday" jdbcType="VARCHAR" />
+    <result column="hometown" property="hometown" jdbcType="VARCHAR" />
+    <result column="political" property="political" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="CHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="education" property="education" jdbcType="VARCHAR" />
+    <result column="skills" property="skills" jdbcType="VARCHAR" />
+    <result column="honor" property="honor" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="pageviews" property="pageviews" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from student
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByUserId">
+    delete from student
+    where user_id = #{userId}
+  </delete>
+  <insert id="insert" parameterType="com.job.pojo.Student" useGeneratedKeys="true" keyProperty="id" >
+    insert into student (name, avatar, birthday, 
+      hometown, political, phone, 
+      email, education, skills, 
+      honor, user_id, pageviews
+      )
+    values (#{name,jdbcType=VARCHAR}, #{avatar,jdbcType=VARCHAR}, #{birthday,jdbcType=VARCHAR}, 
+      #{hometown,jdbcType=VARCHAR}, #{political,jdbcType=VARCHAR}, #{phone,jdbcType=CHAR}, 
+      #{email,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{skills,jdbcType=VARCHAR}, 
+      #{honor,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{pageviews,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.job.pojo.Student" >
+    update student
+    set name = #{name,jdbcType=VARCHAR},
+      avatar = #{avatar,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=VARCHAR},
+      hometown = #{hometown,jdbcType=VARCHAR},
+      political = #{political,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=CHAR},
+      email = #{email,jdbcType=VARCHAR},
+      education = #{education,jdbcType=VARCHAR},
+      skills = #{skills,jdbcType=VARCHAR},
+      honor = #{honor,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      pageviews = #{pageviews,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByUserId" parameterType="com.job.pojo.Student" >
+    update student
+    set name = #{name},
+      avatar = #{avatar},
+      birthday = #{birthday},
+      hometown = #{hometown},
+      political = #{political},
+      phone = #{phone},
+      email = #{email},
+      education = #{education},
+      skills = #{skills},
+      honor = #{honor},
+      pageviews = #{pageviews}
+    where user_id = #{userId}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select *
+    from student
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select *
+    from student
+  </select>
+  <select id="selectByUserId" resultType="com.job.pojo.Student">
+    select *
+    from student
+    where user_id = #{userId}
+  </select>
+</mapper>
