@@ -30,38 +30,6 @@ public class ExperienceController {
     public int edit(Integer userId,String experience){
         //json转list
         List<Experience> experienceList = JSON.parseArray(experience,Experience.class);
-
-//        System.out.println(experienceList);
-//        System.out.println("类型：");
-//        System.out.println(experienceList.getClass().toString());
-//
-//        if (experienceService.searchByUserId(userId) == null){
-//            //逐一插入
-//            for (int i = 0; i < experienceList.size(); i++) {
-//                Experience e = experienceList.get(i);
-//                e.setUserId(userId);
-//                experienceService.insertExperience(e);
-//            }
-//            if (experienceService.searchByUserId(userId) != null){
-//                return 1;
-//            } else {
-//                return 0;
-//            }
-//        } else {
-//            //删除再插入
-//            experienceService.deleteByUserId(userId);
-//            for (int i = 0; i < experienceList.size(); i++) {
-//                Experience e = experienceList.get(i);
-//                e.setUserId(userId);
-//                experienceService.insertExperience(e);
-//            }
-//            if (experienceService.searchByUserId(userId) != null){
-//                return 1;
-//            } else {
-//                return 0;
-//            }
-//        }
-
         for (int i = 0; i < experienceList.size(); i++) {
             experienceList.get(i).setUserId(userId);
         }

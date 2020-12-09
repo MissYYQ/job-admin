@@ -23,9 +23,10 @@
     values (#{name}, #{startdate}, #{enddate}, #{position}, #{description}, #{userId})
   </insert>
   <insert id="insertExperiences" parameterType="list">
-    insert into experience (name, startDate, endDate, position, description, user_id)
+    insert into experience (name,startDate,endDate,position,description,user_id)
+    values
     <foreach collection="list" item="item" index="index" separator=",">
-      values (#{item.name},#{item.startdate},#{item.enddate},#{item.position},#{item.description},#{item.userId})
+      (#{item.name},#{item.startdate},#{item.enddate},#{item.position},#{item.description},#{item.userId})
     </foreach>
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.job.pojo.Experience" >
