@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.job.mapper.CollectionUserMapper" >
+  <resultMap id="BaseResultMap" type="com.job.pojo.CollectionUser" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="company_id" property="companyId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from collectionuser
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.job.pojo.CollectionUser" useGeneratedKeys="true" keyProperty="id" >
+    insert into collectionuser (company_id, user_id)
+    values (#{companyId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.job.pojo.CollectionUser" >
+    update collectionuser
+    set company_id = #{companyId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select id, company_id, user_id
+    from collectionuser
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, company_id, user_id
+    from collectionuser
+  </select>
+  <select id="selectCountByCompanyId" resultType="java.lang.Integer">
+    select count(*)
+    from collectionuser
+    where company_id = #{companyId}
+  </select>
+</mapper>

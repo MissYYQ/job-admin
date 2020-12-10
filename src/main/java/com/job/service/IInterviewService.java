@@ -8,4 +8,6 @@ public interface IInterviewService {
     List<Interview> selectByUserId(Integer userId);
 
     int countByUserId(Integer userId);
+
+    int selectCountByCompanyId(Integer companyId);
 }

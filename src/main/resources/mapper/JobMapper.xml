@@ -178,4 +178,9 @@
                   where d.user_id = #{userId}
                  )
   </select>
+  <select id="selectCountByCompanyId" resultType="java.lang.Integer">
+    select count(*)
+    from job
+    where company_id = #{companyId}
+  </select>
 </mapper>

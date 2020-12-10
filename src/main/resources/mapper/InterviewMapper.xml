@@ -11,10 +11,12 @@
     <result column="job_id" property="jobId" jdbcType="INTEGER" />
     <!--  关联job表-->
     <association property="job" javaType="com.job.pojo.Job" columnPrefix="j_">
+      <id column="id" property="id" jdbcType="INTEGER" />
       <result column="name" property="name" jdbcType="VARCHAR" />
     </association>
     <!--  关联company表-->
     <association property="company" javaType="com.job.pojo.Company" columnPrefix="c_">
+      <id column="id" property="id" jdbcType="INTEGER" />
       <result column="name" property="name" jdbcType="VARCHAR" />
     </association>
   </resultMap>
@@ -64,5 +66,19 @@
     select count(*)
     from interview
     where user_id = #{userId}
+  </select>
+  <select id="selectCountByCompanyId" resultType="java.lang.Integer">
+    select count(*)
+    from interview i
+    left join (
+      select j.id as jobId,
+         j.name as jobName,
+         c.name as companyName
+      from job j
+      left join company c
+      on j.company_id = c.id
+      where c.id = #{companyId}
+    ) cj
+    on i.job_id = cj.jobId
   </select>
 </mapper>

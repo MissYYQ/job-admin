@@ -27,4 +27,6 @@ public interface JobMapper {
     List<Job> selectCollectJob(Integer userId);
 
     List<Job> selectDeliveryJob(Integer userId);
+
+    int selectCountByCompanyId(Integer companyId);
 }

@@ -25,4 +25,10 @@ public class InterviewServiceImpl implements IInterviewService {
         int count = interviewMapper.selectCountByUserId(userId);
         return count;
     }
+
+    @Override
+    public int selectCountByCompanyId(Integer companyId) {
+        int count = interviewMapper.selectCountByCompanyId(companyId);
+        return count;
+    }
 }

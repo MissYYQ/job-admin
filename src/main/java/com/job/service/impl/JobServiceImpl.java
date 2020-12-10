@@ -66,4 +66,10 @@ public class JobServiceImpl  implements IJobService {
         List<Job> jobList = jobMapper.selectDeliveryJob(userId);
         return jobList;
     }
+
+    @Override
+    public int getCountByCompanyId(Integer companyId) {
+        int count = jobMapper.selectCountByCompanyId(companyId);
+        return count;
+    }
 }

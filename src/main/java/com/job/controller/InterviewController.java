@@ -29,4 +29,11 @@ public class InterviewController {
         List<Interview> interviewList = interviewService.selectByUserId(userId);
         return interviewList;
     }
+
+    @ResponseBody
+    @RequestMapping("/countByCompanyId")
+    public int countByCompanyId(Integer companyId){
+        int count = interviewService.selectCountByCompanyId(companyId);
+        return count;
+    }
 }

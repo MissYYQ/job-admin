@@ -16,6 +16,10 @@ public class JobController {
     @Autowired
     private IJobService jobService;
 
+    /**
+     * 获取所有职位
+     * @return 所有职位的集合
+     */
     @ResponseBody
     @RequestMapping("/all")
     public List<Job> getAll(){
@@ -23,6 +27,11 @@ public class JobController {
         return jobList;
     }
 
+    /**
+     * 学生端首页的搜索
+     * @param key 关键字（职位名称/企业名称）
+     * @return 匹配的职位集合
+     */
     @ResponseBody
     @RequestMapping("/search")
     public List<Job> getSearchJob(String key){
@@ -30,6 +39,11 @@ public class JobController {
         return jobList;
     }
 
+    /**
+     * 学生端热门职位页面的搜索
+     * @param key 职位名称
+     * @return 匹配的职位集合
+     */
     @ResponseBody
     @RequestMapping("/hotJobSearch")
     public List<Job> searchHotJob(String key){
@@ -37,6 +51,11 @@ public class JobController {
         return jobList;
     }
 
+    /**
+     * 根据id获取单个职位
+     * @param id 职位编号
+     * @return 匹配的单个职位
+     */
     @ResponseBody
     @RequestMapping("/one")
     public Job getOne(int id){
@@ -44,6 +63,11 @@ public class JobController {
         return job;
     }
 
+    /**
+     * 根据企业编号获取职位集合
+     * @param id 企业编号
+     * @return 该企业的所有职位集合
+     */
     @ResponseBody
     @RequestMapping("/jobForCompany")
     public List<Job> getJobByCompanyId(int id){
@@ -51,12 +75,20 @@ public class JobController {
         return jobList;
     }
 
+    /**
+     * 增加该职位的预览量
+     * @param id 职位编号
+     */
     @ResponseBody
     @RequestMapping("/addPageviews")
     public void addPageviews(int id){
         jobService.addPageviews(id);
     }
 
+    /**
+     * 根据预览量排序得到热门职位
+     * @return 根据预览量排序的所有职位的集合
+     */
     @ResponseBody
     @RequestMapping("/hotJob")
     public List<Job> hotJob(){
@@ -64,6 +96,11 @@ public class JobController {
         return jobList;
     }
 
+    /**
+     * 获取用户的所有收藏职位
+     * @param userId 用户编号
+     * @return 该用户收藏职位的集合
+     */
     @ResponseBody
     @RequestMapping("/collectJob")
     public List<Job> collectJob(Integer userId){
@@ -71,11 +108,29 @@ public class JobController {
         return jobList;
     }
 
+    /**
+     * 获取用户投递的职位集合
+     * @param userId 用户编号
+     * @return 用户投递的职位集合
+     */
     @ResponseBody
     @RequestMapping("/deliveryJob")
     public List<Job> deliveryJob(Integer userId){
         List<Job> deliveryJob = jobService.getDeliveryJob(userId);
         return deliveryJob;
+    }
+
+
+    /**
+     * 获取企业的职位数量
+     * @param companyId 企业编号
+     * @return 该企业的职位数量
+     */
+    @ResponseBody
+    @RequestMapping("/countByCompanyId")
+    public int countByCompanyId(Integer companyId){
+        int count = jobService.getCountByCompanyId(companyId);
+        return count;
     }
 
 }
