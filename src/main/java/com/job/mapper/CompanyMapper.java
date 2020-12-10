@@ -18,5 +18,9 @@ public interface CompanyMapper {
 
     List<Company> selectHotCompany();
 
-    List<Company> selsectSearchHotCompany(String key);
+    List<Company> selectSearchHotCompany(String key);
+
+    Company selectByUserId(Integer userId);
+
+    int updateByUserId(Company c);
 }

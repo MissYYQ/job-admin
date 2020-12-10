@@ -15,4 +15,10 @@ public interface ICompanyService {
     List<Company> getHotCompany();
 
     List<Company> getSearchHotCompany(String key);
+
+    Company searchByUserId(Integer userId);
+
+    int insertCompany(Company c);
+
+    int updateCompany(Company c);
 }

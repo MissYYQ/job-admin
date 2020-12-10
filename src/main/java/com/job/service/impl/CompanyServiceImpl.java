@@ -39,7 +39,25 @@ public class CompanyServiceImpl implements ICompanyService {
 
     @Override
     public List<Company> getSearchHotCompany(String key) {
-        List<Company> companyList = companyMapper.selsectSearchHotCompany(key);
+        List<Company> companyList = companyMapper.selectSearchHotCompany(key);
         return companyList;
+    }
+
+    @Override
+    public Company searchByUserId(Integer userId) {
+        Company company = companyMapper.selectByUserId(userId);
+        return company;
+    }
+
+    @Override
+    public int insertCompany(Company c) {
+        int i = companyMapper.insert(c);
+        return i;
+    }
+
+    @Override
+    public int updateCompany(Company c) {
+        int i = companyMapper.updateByUserId(c);
+        return i;
     }
 }
