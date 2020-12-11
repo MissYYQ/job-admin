@@ -1,5 +1,7 @@
 package com.job.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.job.pojo.Job;
 import com.job.service.IJobService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,9 +54,9 @@ public class JobController {
     }
 
     /**
-     * 根据id获取单个职位
+     * 根据id获取单个职位及与其关联的公司信息
      * @param id 职位编号
-     * @return 匹配的单个职位
+     * @return 匹配的单个职位及其公司信息
      */
     @ResponseBody
     @RequestMapping("/one")
@@ -131,6 +133,54 @@ public class JobController {
     public int countByCompanyId(Integer companyId){
         int count = jobService.getCountByCompanyId(companyId);
         return count;
+    }
+
+    /**
+     * 更新职位
+     * @param id 职位编号
+     * @param companyId 公司编号
+     * @param job 职位
+     * @return 变动量
+     */
+    @ResponseBody
+    @RequestMapping("/update")
+    public int update(Integer id,Integer companyId,String job){
+        JSONObject jsonObject = JSON.parseObject(job);
+        Job j = new Job();
+        j.setId(id);
+        j.setCompanyId(companyId);
+        j.setName(jsonObject.getString("name"));
+        j.setSalary(jsonObject.getString("salary"));
+        j.setCity(jsonObject.getString("city"));
+        j.setExperience(jsonObject.getString("experience"));
+        j.setDegree(jsonObject.getString("degree"));
+        j.setClaim(jsonObject.getString("claim"));
+        j.setDuty(jsonObject.getString("duty"));
+        j.setKeywords(jsonObject.getString("keywords"));
+        j.setIndustry(jsonObject.getString("industry"));
+        j.setKind(jsonObject.getInteger("kind"));
+        int i = jobService.update(j);
+        return i;
+    }
+
+    @ResponseBody
+    @RequestMapping("/add")
+    public int update(Integer companyId,String job){
+        JSONObject jsonObject = JSON.parseObject(job);
+        Job j = new Job();
+        j.setCompanyId(companyId);
+        j.setName(jsonObject.getString("name"));
+        j.setSalary(jsonObject.getString("salary"));
+        j.setCity(jsonObject.getString("city"));
+        j.setExperience(jsonObject.getString("experience"));
+        j.setDegree(jsonObject.getString("degree"));
+        j.setClaim(jsonObject.getString("claim"));
+        j.setDuty(jsonObject.getString("duty"));
+        j.setKeywords(jsonObject.getString("keywords"));
+        j.setIndustry(jsonObject.getString("industry"));
+        j.setKind(jsonObject.getInteger("kind"));
+        int i = jobService.add(j);
+        return i;
     }
 
 }

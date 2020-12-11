@@ -29,4 +29,5 @@ public interface JobMapper {
     List<Job> selectDeliveryJob(Integer userId);
 
     int selectCountByCompanyId(Integer companyId);
+
 }

@@ -11,6 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 
 public class Job {
+
     private Integer id;
 
     private String name;
@@ -31,9 +32,7 @@ public class Job {
 
     private String industry;
 
-    private Boolean kind;
-
-    private Integer number;
+    private Integer kind;
 
     private Date deadline;
 

@@ -3,7 +3,7 @@
 <mapper namespace="com.job.mapper.JobMapper" >
   <resultMap id="BaseResultMap" type="com.job.pojo.Job" >
     <id column="id" property="id" jdbcType="INTEGER" />
-      <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="salary" property="salary" jdbcType="VARCHAR" />
     <result column="city" property="city" jdbcType="VARCHAR" />
     <result column="experience" property="experience" jdbcType="CHAR" />
@@ -13,7 +13,6 @@
     <result column="keyWords" property="keywords" jdbcType="VARCHAR" />
     <result column="industry" property="industry" jdbcType="VARCHAR" />
     <result column="kind" property="kind" jdbcType="BIT" />
-    <result column="number" property="number" jdbcType="INTEGER" />
     <result column="deadline" property="deadline" jdbcType="DATE" />
     <result column="company_id" property="companyId" jdbcType="INTEGER" />
     <result column="pageviews" property="pageviews" jdbcType="INTEGER" />
@@ -46,15 +45,15 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.job.pojo.Job" useGeneratedKeys="true" keyProperty="id" >
-    insert into job (name, salary, city, 
-      experience, degree, claim, 
-      duty, keyWords, industry, 
-      kind, number, deadline, company_id, pageviews
+    insert into job (name, salary, city,
+      experience, degree, claim,
+      duty, keyWords, industry,
+      kind, deadline, company_id
       )
     values (#{name}, #{salary}, #{city},
       #{experience}, #{degree}, #{claim},
       #{duty}, #{keywords}, #{industry},
-      #{kind}, #{number}, #{deadline}, #{companyId}, #{pageviews}
+      #{kind}, #{deadline}, #{companyId}
       )
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.job.pojo.Job" >
@@ -69,7 +68,6 @@
       keyWords = #{keywords},
       industry = #{industry},
       kind = #{kind},
-      number = #{number},
       deadline = #{deadline},
       company_id = #{companyId},
       pageviews = #{pageviews}

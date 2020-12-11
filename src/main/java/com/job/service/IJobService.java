@@ -25,4 +25,8 @@ public interface IJobService {
     List<Job> getDeliveryJob(Integer userId);
 
     int getCountByCompanyId(Integer companyId);
+
+    int update(Job j);
+
+    int add(Job j);
 }

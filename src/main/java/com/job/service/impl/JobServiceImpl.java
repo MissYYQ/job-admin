@@ -72,4 +72,17 @@ public class JobServiceImpl  implements IJobService {
         int count = jobMapper.selectCountByCompanyId(companyId);
         return count;
     }
+
+    @Override
+    public int update(Job j) {
+        int i = jobMapper.updateByPrimaryKey(j);
+        return i;
+    }
+
+    @Override
+    public int add(Job j) {
+        int i = jobMapper.insert(j);
+        return i;
+    }
+
 }
