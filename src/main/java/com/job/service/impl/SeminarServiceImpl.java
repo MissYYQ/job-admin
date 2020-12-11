@@ -32,4 +32,22 @@ public class SeminarServiceImpl implements ISeminarService {
         return seminarList;
     }
 
+    @Override
+    public List<Seminar> getAllByCompanyId(Integer companyId) {
+        List<Seminar> seminarList = seminarMapper.selectByCompanyId(companyId);
+        return seminarList;
+    }
+
+    @Override
+    public int delete(Integer id) {
+        int i = seminarMapper.deleteByPrimaryKey(id);
+        return i;
+    }
+
+    @Override
+    public int add(Seminar s) {
+        int i = seminarMapper.insert(s);
+        return i;
+    }
+
 }

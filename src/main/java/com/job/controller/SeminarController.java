@@ -1,5 +1,7 @@
 package com.job.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.job.pojo.Seminar;
 import com.job.service.ISeminarService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +37,34 @@ public class SeminarController {
     public List<Seminar> search(String key){
         List<Seminar> seminarList = seminarService.getSearchSeminar(key);
         return seminarList;
+    }
+
+    @RequestMapping("/allForCompany")
+    @ResponseBody
+    public List<Seminar> getAllByCompanyId(Integer companyId){
+        List<Seminar> seminarList = seminarService.getAllByCompanyId(companyId);
+        return seminarList;
+    }
+
+    @RequestMapping("/delete")
+    @ResponseBody
+    public int delete(Integer id){
+        int i = seminarService.delete(id);
+        return i;
+    }
+
+    @RequestMapping("/add")
+    @ResponseBody
+    public int add(Integer companyId,String seminar){
+        JSONObject jsonObject = JSON.parseObject(seminar);
+        Seminar s = new Seminar();
+        s.setCompanyId(companyId);
+        s.setSchool(jsonObject.getString("school"));
+        s.setLocation(jsonObject.getString("location"));
+        s.setDate(jsonObject.getString("date"));
+        s.setTime(jsonObject.getString("time"));
+        int i = seminarService.add(s);
+        return i;
     }
 
 }

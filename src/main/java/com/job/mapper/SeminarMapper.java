@@ -15,4 +15,6 @@ public interface SeminarMapper {
     int updateByPrimaryKey(Seminar record);
 
     List<Seminar> selectSearchSeminar(String key);
+
+    List<Seminar> selectByCompanyId(Integer companyId);
 }

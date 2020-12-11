@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="school" property="school" jdbcType="VARCHAR" />
     <result column="location" property="location" jdbcType="VARCHAR" />
-    <result column="date" property="date" jdbcType="DATE" />
+    <result column="date" property="date" jdbcType="CHAR" />
     <result column="time" property="time" jdbcType="CHAR" />
     <result column="company_id" property="companyId" jdbcType="INTEGER" />
     <!--  关联company表-->
@@ -19,22 +19,20 @@
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from seminar
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id}
   </delete>
   <insert id="insert" parameterType="com.job.pojo.Seminar" useGeneratedKeys="true" keyProperty="id" >
-    insert into seminar (school, location, date, 
-      time, company_id)
-    values (#{school,jdbcType=VARCHAR}, #{location,jdbcType=VARCHAR}, #{date,jdbcType=DATE}, 
-      #{time,jdbcType=CHAR}, #{companyId,jdbcType=INTEGER})
+    insert into seminar (school, location, date, time, company_id)
+    values (#{school}, #{location}, #{date}, #{time}, #{companyId})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.job.pojo.Seminar" >
     update seminar
-    set school = #{school,jdbcType=VARCHAR},
-      location = #{location,jdbcType=VARCHAR},
-      date = #{date,jdbcType=DATE},
-      time = #{time,jdbcType=CHAR},
-      company_id = #{companyId,jdbcType=INTEGER}
-    where id = #{id,jdbcType=INTEGER}
+    set school = #{school},
+      location = #{location},
+      date = #{date},
+      time = #{time},
+      company_id = #{companyId}
+    where id = #{id}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" >
     select s.*,
@@ -60,5 +58,10 @@
     left join company c
     on s.company_id = c.id
     where c.name like concat('%',#{key},'%') or s.school like concat('%',#{key},'%')
+  </select>
+  <select id="selectByCompanyId" resultType="com.job.pojo.Seminar">
+    select *
+    from seminar
+    where company_id = #{companyId}
   </select>
 </mapper>
