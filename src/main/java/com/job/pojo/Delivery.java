@@ -18,6 +18,12 @@ public class Delivery {
 
     private String deliverytime;
 
-    private Boolean status;
+    private Integer status;
+
+    private Job job;
+
+    private Company company;
+
+    private ResumeFile resumefile;
 
 }

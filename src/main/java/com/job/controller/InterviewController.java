@@ -1,5 +1,7 @@
 package com.job.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.job.pojo.Interview;
 import com.job.service.IInterviewService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +37,20 @@ public class InterviewController {
     public int countByCompanyId(Integer companyId){
         int count = interviewService.selectCountByCompanyId(companyId);
         return count;
+    }
+
+    @ResponseBody
+    @RequestMapping("/add")
+    public int add(Integer userId,Integer jobId,String addInterview){
+        JSONObject jsonObject = JSON.parseObject(addInterview);
+        Interview interview = new Interview();
+        interview.setUserId(userId);
+        interview.setJobId(jobId);
+        interview.setDate(jsonObject.getString("date"));
+        interview.setTime(jsonObject.getString("time"));
+        interview.setRegion(jsonObject.getString("region"));
+        interview.setDetailedaddress(jsonObject.getString("detailedaddress"));
+        int i = interviewService.add(interview);
+        return i;
     }
 }

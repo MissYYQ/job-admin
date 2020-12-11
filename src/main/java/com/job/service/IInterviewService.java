@@ -10,4 +10,6 @@ public interface IInterviewService {
     int countByUserId(Integer userId);
 
     int selectCountByCompanyId(Integer companyId);
+
+    int add(Interview interview);
 }

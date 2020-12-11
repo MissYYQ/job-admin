@@ -1,9 +1,12 @@
 package com.job.service.impl;
 
 import com.job.mapper.DeliveryMapper;
+import com.job.pojo.Delivery;
 import com.job.service.IDeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class DeliveryServiceImpl implements IDeliveryService {
@@ -26,5 +29,29 @@ public class DeliveryServiceImpl implements IDeliveryService {
     public int deliveryCount(Integer userId) {
         int count = deliveryMapper.deliveryCount(userId);
         return count;
+    }
+
+    @Override
+    public List<Delivery> deal(Integer companyId) {
+        List<Delivery> deliveryList = deliveryMapper.selectDeal(companyId);
+        return deliveryList;
+    }
+
+    @Override
+    public int pass(Integer id) {
+        int i = deliveryMapper.pass(id);
+        return i;
+    }
+
+    @Override
+    public int fail(Integer id) {
+        int i = deliveryMapper.fail(id);
+        return i;
+    }
+
+    @Override
+    public int interview(Integer id) {
+        int i = deliveryMapper.interview(id);
+        return i;
     }
 }

@@ -21,4 +21,12 @@ public interface DeliveryMapper {
     int isDelivery(@Param("userId")Integer userId,  @Param("jobId")Integer jobId);
 
     int deliveryCount(Integer userId);
+
+    List<Delivery> selectDeal(Integer companyId);
+
+    int pass(Integer id);
+
+    int fail(Integer id);
+
+    int interview(Integer id);
 }
