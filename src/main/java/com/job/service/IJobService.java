@@ -29,4 +29,6 @@ public interface IJobService {
     int update(Job j);
 
     int add(Job j);
+
+    int delete(Integer id);
 }

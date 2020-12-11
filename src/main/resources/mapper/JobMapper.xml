@@ -13,7 +13,7 @@
     <result column="keyWords" property="keywords" jdbcType="VARCHAR" />
     <result column="industry" property="industry" jdbcType="VARCHAR" />
     <result column="kind" property="kind" jdbcType="BIT" />
-    <result column="deadline" property="deadline" jdbcType="DATE" />
+    <result column="deadline" property="deadline" jdbcType="CHAR" />
     <result column="company_id" property="companyId" jdbcType="INTEGER" />
     <result column="pageviews" property="pageviews" jdbcType="INTEGER" />
     <!--  关联company表-->

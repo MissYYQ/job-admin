@@ -85,4 +85,10 @@ public class JobServiceImpl  implements IJobService {
         return i;
     }
 
+    @Override
+    public int delete(Integer id) {
+        int i = jobMapper.deleteByPrimaryKey(id);
+        return i;
+    }
+
 }

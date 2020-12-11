@@ -158,6 +158,7 @@ public class JobController {
         j.setDuty(jsonObject.getString("duty"));
         j.setKeywords(jsonObject.getString("keywords"));
         j.setIndustry(jsonObject.getString("industry"));
+        j.setDeadline(jsonObject.getString("deadline"));
         j.setKind(jsonObject.getInteger("kind"));
         int i = jobService.update(j);
         return i;
@@ -180,6 +181,18 @@ public class JobController {
         j.setIndustry(jsonObject.getString("industry"));
         j.setKind(jsonObject.getInteger("kind"));
         int i = jobService.add(j);
+        return i;
+    }
+
+    /**
+     * 删除单个职位
+     * @param id 职位编号
+     * @return 变动的数据量
+     */
+    @ResponseBody
+    @RequestMapping("/delete")
+    public int delete(Integer id){
+        int i = jobService.delete(id);
         return i;
     }
 

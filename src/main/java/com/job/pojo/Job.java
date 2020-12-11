@@ -34,7 +34,7 @@ public class Job {
 
     private Integer kind;
 
-    private Date deadline;
+    private String deadline;
 
     private Integer companyId;
 
