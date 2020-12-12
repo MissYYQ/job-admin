@@ -36,4 +36,8 @@ public class Student {
 
     private Integer pageviews;
 
+    private User user;
+
+    private IntentionJob intentionjob;
+
 }

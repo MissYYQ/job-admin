@@ -19,4 +19,8 @@ public interface StudentMapper {
     int deleteByUserId(Integer userId);
 
     int updateByUserId(Student student);
+
+    List<Student> selectAllForCompanyIndex();
+
+    List<Student> search(String key);
 }

@@ -15,6 +15,17 @@
     <result column="honor" property="honor" jdbcType="VARCHAR" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="pageviews" property="pageviews" jdbcType="INTEGER" />
+    <!--  关联user表-->
+    <association property="user" javaType="com.job.pojo.User" columnPrefix="u_" >
+      <id column="id" property="id" jdbcType="INTEGER" />
+    </association>
+    <!--  关联user表-->
+    <association property="intentionjob" javaType="com.job.pojo.IntentionJob" columnPrefix="ij_" >
+      <id column="id" property="id" jdbcType="INTEGER" />
+      <result column="job" property="job" jdbcType="VARCHAR" />
+      <result column="salary" property="salary" jdbcType="VARCHAR" />
+      <result column="user_id" property="userId" jdbcType="INTEGER" />
+    </association>
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from student
@@ -80,5 +91,28 @@
     select *
     from student
     where user_id = #{userId}
+  </select>
+  <select id="selectAllForCompanyIndex" resultMap="BaseResultMap">
+    select ij.id as ij_id,ij.job as ij_job,ij.salary as ij_salary,su.*
+    from intentionjob ij
+    left join (
+                 select s.*
+                 from student s
+                 left join `user` u
+                 on s.user_id = u.id
+              ) su
+    on ij.user_id = su.user_id
+  </select>
+  <select id="search" resultMap="BaseResultMap">
+    select ij.id as ij_id,ij.job as ij_job,ij.salary as ij_salary,su.*
+    from intentionjob ij
+    left join (
+                 select s.*
+                 from student s
+                 left join `user` u
+                 on s.user_id = u.id
+              ) su
+    on ij.user_id = su.user_id
+    where ij.job like concat('%',#{key},'%') or su.education like concat('%',#{key},'%')
   </select>
 </mapper>

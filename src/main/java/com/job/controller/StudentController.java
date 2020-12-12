@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/student")
 public class StudentController {
@@ -27,10 +29,8 @@ public class StudentController {
     @ResponseBody
     @RequestMapping("/edit")
     public int edit(Integer userId, String resume){
-
         JSONObject jsonObject = JSON.parseObject(resume);
         Student student = new Student();
-
         student.setUserId(userId);
         student.setBirthday(jsonObject.getString("birthday"));
         student.setSkills(jsonObject.getString("skills"));
@@ -42,7 +42,6 @@ public class StudentController {
         student.setName(jsonObject.getString("name"));
         student.setPolitical(jsonObject.getString("political"));
         student.setAvatar(jsonObject.getString("avatar"));
-
         if (studentService.searchByUserId(userId) == null){
             //插入
              return studentService.insertStudent(student);
@@ -51,4 +50,19 @@ public class StudentController {
              return studentService.updateStudent(student);
         }
     }
+
+    @ResponseBody
+    @RequestMapping("/all")
+    public List<Student> allForCompanyIndex(){
+        List<Student> studentList = studentService.allForCompanyIndex();
+        return studentList;
+    }
+
+    @ResponseBody
+    @RequestMapping("/search")
+    public List<Student> search(String key){
+        List<Student> studentList = studentService.search(key);
+        return studentList;
+    }
+
 }
