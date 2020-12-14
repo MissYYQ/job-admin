@@ -53,4 +53,13 @@ public class InterviewController {
         int i = interviewService.add(interview);
         return i;
     }
+
+
+    @ResponseBody
+    @RequestMapping("allByCompanyId")
+    public List<Interview> selectByCompanyId (Integer companyId){
+        List<Interview> interviewList = interviewService.selectByCompanyId(companyId);
+        return interviewList;
+    }
+
 }

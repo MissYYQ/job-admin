@@ -37,4 +37,10 @@ public class InterviewServiceImpl implements IInterviewService {
         int i = interviewMapper.insert(interview);
         return i;
     }
+
+    @Override
+    public List<Interview> selectByCompanyId(Integer companyId) {
+        List<Interview> interviewList = interviewMapper.selectByCompanyId(companyId);
+        return interviewList;
+    }
 }

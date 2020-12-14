@@ -19,4 +19,6 @@ public interface InterviewMapper {
     int selectCountByUserId(Integer userId);
 
     int selectCountByCompanyId(Integer companyId);
+
+    List<Interview> selectByCompanyId(Integer companyId);
 }

@@ -81,4 +81,14 @@
     ) cj
     on i.job_id = cj.jobId
   </select>
+  <select id="selectByCompanyId" resultMap="BaseResultMap">
+    select i.*,
+           j.name as j_name
+    from interview i
+    left join job j
+    on i.job_id = j.id
+    left join company c
+    on j.company_id = c.id
+    where c.id = #{companyId}
+  </select>
 </mapper>
