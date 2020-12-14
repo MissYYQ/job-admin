@@ -54,4 +54,16 @@ public class DeliveryServiceImpl implements IDeliveryService {
         int i = deliveryMapper.interview(id);
         return i;
     }
+
+    @Override
+    public int accept(Integer id) {
+        int i = deliveryMapper.accept(id);
+        return i;
+    }
+
+    @Override
+    public int refuse(Integer id) {
+        int i = deliveryMapper.refuse(id);
+        return i;
+    }
 }

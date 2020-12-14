@@ -29,4 +29,8 @@ public interface DeliveryMapper {
     int fail(Integer id);
 
     int interview(Integer id);
+
+    int accept(Integer id);
+
+    int refuse(Integer id);
 }

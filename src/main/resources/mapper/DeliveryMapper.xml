@@ -60,6 +60,16 @@
     set status = 3
     where id = #{id}
   </update>
+  <update id="accept">
+    update delivery
+    set status = 4
+    where id = #{id}
+  </update>
+  <update id="refuse">
+    update delivery
+    set status = 5
+    where id = #{id}
+  </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select *
     from delivery

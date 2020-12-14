@@ -28,4 +28,6 @@ public class Interview {
 
     private Company company;
 
+    private Delivery delivery;
+
 }

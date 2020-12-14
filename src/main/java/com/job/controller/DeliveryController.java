@@ -71,4 +71,18 @@ public class DeliveryController {
         int i = deliveryService.interview(id);
         return i;
     }
+
+    @ResponseBody
+    @RequestMapping("/accept")
+    public int accept(Integer id){
+        int i = deliveryService.accept(id);
+        return i;
+    }
+
+    @ResponseBody
+    @RequestMapping("/refuse")
+    public int refuse(Integer id){
+        int i = deliveryService.refuse(id);
+        return i;
+    }
 }
