@@ -126,7 +126,8 @@
 	left join (
 		select *
 		from collectionuser
-		where company_id = 4
-	) cu on s.user_id = cu.user_id
+		where company_id = #{companyId}
+	) cu
+	on s.user_id = cu.user_id
   </select>
 </mapper>

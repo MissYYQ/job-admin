@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb586755-f115-4ec6-b4b6-0e0b1ede1444" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/controller/CollectionUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/CollectionUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/mapper/CollectionUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/mapper/CollectionUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/pojo/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/pojo/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/ICollectionUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/ICollectionUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/IStudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/impl/CollectionUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/impl/CollectionUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CollectionUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CollectionUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,7 +37,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/StudentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
+            <state relative-caret-position="544">
               <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
             </state>
           </provider>
@@ -432,7 +421,7 @@
       <workItem from="1607667164258" duration="5418000" />
       <workItem from="1607682716485" duration="8023000" />
       <workItem from="1607748917029" duration="5683000" />
-      <workItem from="1607908586595" duration="4398000" />
+      <workItem from="1607908586595" duration="4439000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1606292854469</created>
@@ -637,11 +626,18 @@
       <option name="project" value="LOCAL" />
       <updated>1607757375083</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="companyCollection">
+      <created>1607913035702</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1607913035702</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187388000" />
+    <option name="totallyTimeSpent" value="187429000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -654,7 +650,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27211797" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -664,7 +659,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2521994" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2521994" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2489019" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -692,7 +687,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="111" />
     <MESSAGE value="222" />
     <MESSAGE value="333" />
     <MESSAGE value="444" />
@@ -717,7 +711,8 @@
     <MESSAGE value="宣讲会管理" />
     <MESSAGE value="待处理简历" />
     <MESSAGE value="companyIndex" />
-    <option name="LAST_COMMIT_MESSAGE" value="companyIndex" />
+    <MESSAGE value="companyCollection" />
+    <option name="LAST_COMMIT_MESSAGE" value="companyCollection" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/job/pojo/CollectionJob.java">
@@ -1137,7 +1132,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/StudentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
+        <state relative-caret-position="544">
           <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
         </state>
       </provider>
