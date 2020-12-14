@@ -16,4 +16,22 @@ public class CollectionUserServiceImpl implements ICollectionUserService {
         int count = collectionUserMapper.selectCountByCompanyId(companyId);
         return count;
     }
+
+    @Override
+    public int searchOne(Integer userId, Integer companyId) {
+        int i = collectionUserMapper.selectOne(userId, companyId);
+        return i;
+    }
+
+    @Override
+    public int collectUser(Integer userId, Integer companyId) {
+        int i = collectionUserMapper.insertCollectUser(userId, companyId);
+        return i;
+    }
+
+    @Override
+    public int uncollectUser(Integer userId, Integer companyId) {
+        int i = collectionUserMapper.deleteUncollectUser(userId, companyId);
+        return i;
+    }
 }

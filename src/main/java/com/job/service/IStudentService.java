@@ -15,4 +15,6 @@ public interface IStudentService {
     List<Student> allForCompanyIndex();
 
     List<Student> search(String key);
+
+    List<Student> selectCollectUserByCompanyId(Integer companyId);
 }

@@ -65,4 +65,11 @@ public class StudentController {
         return studentList;
     }
 
+    @ResponseBody
+    @RequestMapping("/collectUser")
+    public List<Student> selectCollectUserByCompanyId(Integer companyId){
+        List<Student> studentList = studentService.selectCollectUserByCompanyId(companyId);
+        return studentList;
+    }
+
 }

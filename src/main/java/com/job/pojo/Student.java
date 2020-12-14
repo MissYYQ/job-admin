@@ -40,4 +40,6 @@ public class Student {
 
     private IntentionJob intentionjob;
 
+    private CollectionUser collectionuser;
+
 }

@@ -1,6 +1,8 @@
 package com.job.mapper;
 
 import com.job.pojo.CollectionUser;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface CollectionUserMapper {
@@ -15,4 +17,10 @@ public interface CollectionUserMapper {
     int updateByPrimaryKey(CollectionUser record);
 
     int selectCountByCompanyId(Integer companyId);
+
+    int selectOne(@Param("userId") Integer userId, @Param("companyId") Integer companyId);
+
+    int insertCollectUser(@Param("userId") Integer userId, @Param("companyId") Integer companyId);
+
+    int deleteUncollectUser(@Param("userId") Integer userId, @Param("companyId") Integer companyId);
 }

@@ -10,9 +10,17 @@
     delete from collectionuser
     where id = #{id,jdbcType=INTEGER}
   </delete>
+  <delete id="deleteUncollectUser">
+    delete from collectionuser
+    where company_id = #{companyId} and user_id = #{userId}
+  </delete>
   <insert id="insert" parameterType="com.job.pojo.CollectionUser" useGeneratedKeys="true" keyProperty="id" >
     insert into collectionuser (company_id, user_id)
     values (#{companyId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertCollectUser">
+    insert into collectionuser (company_id, user_id)
+    values (#{companyId}, #{userId})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.job.pojo.CollectionUser" >
     update collectionuser
@@ -33,5 +41,10 @@
     select count(*)
     from collectionuser
     where company_id = #{companyId}
+  </select>
+  <select id="selectOne" resultType="java.lang.Integer">
+    select count(*)
+    from collectionuser
+    where user_id = #{userId} and company_id = #{companyId}
   </select>
 </mapper>

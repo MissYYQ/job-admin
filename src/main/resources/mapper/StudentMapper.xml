@@ -26,6 +26,11 @@
       <result column="salary" property="salary" jdbcType="VARCHAR" />
       <result column="user_id" property="userId" jdbcType="INTEGER" />
     </association>
+    <!--  关联collectionuser表-->
+    <association property="collectionuser" javaType="com.job.pojo.CollectionUser" columnPrefix="cu_">
+      <result column="company_id" property="companyId" jdbcType="INTEGER" />
+      <result column="user_id" property="userId" jdbcType="INTEGER" />
+    </association>
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from student
@@ -114,5 +119,14 @@
               ) su
     on ij.user_id = su.user_id
     where ij.job like concat('%',#{key},'%') or su.education like concat('%',#{key},'%')
+  </select>
+  <select id="selectCollectUserByCompanyId" resultMap="BaseResultMap">
+    select s.*
+	from student s
+	left join (
+		select *
+		from collectionuser
+		where company_id = 4
+	) cu on s.user_id = cu.user_id
   </select>
 </mapper>

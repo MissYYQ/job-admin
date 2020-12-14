@@ -19,4 +19,29 @@ public class CollectionUserController {
         int count = collectionUserService.userCount(companyId);
         return count;
     }
+
+    @ResponseBody
+    @RequestMapping("/userIsCollection")
+    public Boolean IsCollection(Integer userId,Integer companyId){
+        int i = collectionUserService.searchOne(userId, companyId);
+        if (i == 0){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    @ResponseBody
+    @RequestMapping("/collectUser")
+    public int collectUser(Integer userId,Integer companyId){
+        int i = collectionUserService.collectUser(userId, companyId);
+        return i;
+    }
+
+    @ResponseBody
+    @RequestMapping("/uncollectUser")
+    public int uncollectUser(Integer userId,Integer companyId){
+        int i = collectionUserService.uncollectUser(userId, companyId);
+        return i;
+    }
 }

@@ -23,4 +23,6 @@ public interface StudentMapper {
     List<Student> selectAllForCompanyIndex();
 
     List<Student> search(String key);
+
+    List<Student> selectCollectUserByCompanyId(Integer companyId);
 }

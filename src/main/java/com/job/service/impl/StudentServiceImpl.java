@@ -43,4 +43,10 @@ public class StudentServiceImpl implements IStudentService {
         List<Student> studentList = studentMapper.search(key);
         return studentList;
     }
+
+    @Override
+    public List<Student> selectCollectUserByCompanyId(Integer companyId) {
+        List<Student> studentList = studentMapper.selectCollectUserByCompanyId(companyId);
+        return studentList;
+    }
 }
