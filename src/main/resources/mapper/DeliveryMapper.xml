@@ -95,14 +95,15 @@
            r.name as r_name,
            r.path as r_path
     from (
-		    select cj.*, d.*
-		    from (
+		    select d.*, cj.*
+            from delivery d
+            left join (
 				    select j.id as j_id, j.`name` as j_name
 				    from job j
 				    left join company c on j.company_id = c.id
 				    where c.id = #{companyId}
-			) cj
-		    left join delivery d on cj.j_id = d.job_id
+             ) cj
+            on d.job_id = cj.j_id
 	) dj
     left join resumefile r on dj.user_id = r.user_id
   </select>

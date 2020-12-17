@@ -50,4 +50,10 @@ public class SeminarServiceImpl implements ISeminarService {
         return i;
     }
 
+    @Override
+    public int update(Seminar s) {
+        int i = seminarMapper.updateByPrimaryKey(s);
+        return i;
+    }
+
 }

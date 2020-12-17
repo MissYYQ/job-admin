@@ -102,6 +102,7 @@
     from job j
     left join company c
     on j.company_id = c.id
+    order by j.id desc
   </select>
   <select id="selectJobByCompanyId" resultType="com.job.pojo.Job">
     select *

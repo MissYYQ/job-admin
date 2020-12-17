@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb586755-f115-4ec6-b4b6-0e0b1ede1444" name="Default Changelist" comment="">
+    <list default="true" id="fb586755-f115-4ec6-b4b6-0e0b1ede1444" name="Default Changelist" comment="interview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/controller/InterviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/InterviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/mapper/InterviewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/mapper/InterviewMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/IInterviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/IInterviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/impl/InterviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/impl/InterviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/InterviewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/InterviewMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/controller/SeminarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/controller/SeminarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/ISeminarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/ISeminarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/job/service/impl/SeminarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/job/service/impl/SeminarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeliveryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeliveryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,41 +40,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/InterviewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/IInterviewService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+            <state relative-caret-position="310">
+              <caret line="94" column="81" selection-start-line="94" selection-start-column="81" selection-end-line="94" selection-end-column="81" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+                <element signature="n#delete#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#0;n#mapper#0;n#!!top" />
+                <element signature="n#update#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#0;n#mapper#0;n#!!top" />
+                <element signature="n#select#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" />
+                <element signature="n#select#3;n#mapper#0;n#!!top" />
+                <element signature="n#select#4;n#mapper#0;n#!!top" />
+                <element signature="n#select#5;n#mapper#0;n#!!top" />
+                <element signature="n#select#6;n#mapper#0;n#!!top" />
+                <element signature="n#select#7;n#mapper#0;n#!!top" />
+                <element signature="n#select#8;n#mapper#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/impl/InterviewServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+            <state relative-caret-position="276">
+              <caret line="182" column="56" lean-forward="true" selection-start-line="182" selection-start-column="56" selection-end-line="182" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/job/mapper/InterviewMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/SeminarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="367">
+              <caret line="80" column="35" lean-forward="true" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/ISeminarService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/impl/SeminarServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeliveryMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="103" column="44" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
+              <folding>
+                <element signature="n#delete#0;n#mapper#0;n#!!top" />
+                <element signature="n#insert#0;n#mapper#0;n#!!top" />
+                <element signature="n#insert#1;n#mapper#0;n#!!top" />
+                <element signature="n#update#0;n#mapper#0;n#!!top" />
+                <element signature="n#select#0;n#mapper#0;n#!!top" />
+                <element signature="n#select#1;n#mapper#0;n#!!top" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" />
+                <element signature="n#select#3;n#mapper#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,7 +150,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/job/pojo/Experience.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ExperienceMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/controller/ExperienceController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/pojo/Interview.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/pojo/Company.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/ICompanyService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CompanyMapper.xml" />
@@ -122,21 +162,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/job/pojo/CollectionUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/mapper/JobMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/pojo/Job.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/IJobService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/JobServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/mapper/SeminarMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/service/ISeminarService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/SeminarServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/SeminarMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/controller/SeminarController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/pojo/Delivery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/service/IDeliveryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/mapper/DeliveryMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeliveryMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/DeliveryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/job/controller/DeliveryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/CollectionUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/mapper/CollectionUserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CollectionUserMapper.xml" />
@@ -151,8 +181,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/job/controller/InterviewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/IInterviewService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/mapper/InterviewMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/InterviewMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/InterviewServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/service/IDeliveryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/DeliveryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/mapper/DeliveryMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/controller/DeliveryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/pojo/Interview.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/InterviewMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/controller/SeminarController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/service/ISeminarService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/job/service/impl/SeminarServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/DeliveryMapper.xml" />
       </list>
     </option>
   </component>
@@ -194,7 +235,7 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="427" />
+    <option name="x" value="425" />
     <option name="y" value="145" />
     <option name="width" value="1585" />
     <option name="height" value="1040" />
@@ -210,7 +251,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -291,6 +331,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -413,7 +454,11 @@
       <workItem from="1607748917029" duration="5683000" />
       <workItem from="1607908586595" duration="4439000" />
       <workItem from="1607913103839" duration="93000" />
-      <workItem from="1607926314110" duration="1509000" />
+      <workItem from="1607926314110" duration="6410000" />
+      <workItem from="1608017329538" duration="630000" />
+      <workItem from="1608084095451" duration="621000" />
+      <workItem from="1608103469843" duration="1130000" />
+      <workItem from="1608182048735" duration="4121000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1606292854469</created>
@@ -632,11 +677,25 @@
       <option name="project" value="LOCAL" />
       <updated>1607913184748</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="company Interview">
+      <created>1607927968292</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1607927968292</updated>
+    </task>
+    <task id="LOCAL-00033" summary="interview">
+      <created>1607933403814</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1607933403814</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189031000" />
+    <option name="totallyTimeSpent" value="200434000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -651,7 +710,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27949062" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21045576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -659,7 +718,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32991204" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2521994" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18328446" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2489019" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -687,8 +746,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="222" />
-    <MESSAGE value="333" />
     <MESSAGE value="444" />
     <MESSAGE value="555" />
     <MESSAGE value="666" />
@@ -712,7 +769,9 @@
     <MESSAGE value="待处理简历" />
     <MESSAGE value="companyIndex" />
     <MESSAGE value="companyCollection" />
-    <option name="LAST_COMMIT_MESSAGE" value="companyCollection" />
+    <MESSAGE value="company Interview" />
+    <MESSAGE value="interview" />
+    <option name="LAST_COMMIT_MESSAGE" value="interview" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/job/pojo/CollectionJob.java">
@@ -736,13 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/pojo/Interview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -816,27 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/SeminarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/ISeminarService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/impl/SeminarServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1204">
-          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/job/mapper/SeminarMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -866,57 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/DeliveryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1708">
-          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/impl/DeliveryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/mapper/DeliveryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeliveryMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1204">
-          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-          <folding>
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/IDeliveryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,27 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="29" selection-start-line="29" selection-end-line="33" selection-end-column="18" />
-          <folding>
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-            <element signature="n#select#5;n#mapper#0;n#!!top" />
-            <element signature="n#select#6;n#mapper#0;n#!!top" />
-            <element signature="n#select#7;n#mapper#0;n#!!top" />
-            <element signature="n#select#8;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/job/pojo/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -1038,13 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1917">
-          <caret line="169" selection-start-line="169" selection-end-line="172" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1092,16 +1044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/IInterviewService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/job/mapper/InterviewMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -1116,27 +1058,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/InterviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/impl/DeliveryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/mapper/DeliveryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/DeliveryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/IDeliveryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/IInterviewService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/InterviewMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+        <state relative-caret-position="661">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
           <folding>
             <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
             <element signature="n#update#0;n#mapper#0;n#!!top" />
             <element signature="n#select#0;n#mapper#0;n#!!top" />
             <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
             <element signature="n#select#3;n#mapper#0;n#!!top" />
             <element signature="n#select#4;n#mapper#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/InterviewController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/pojo/Interview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="308">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="94" column="81" selection-start-line="94" selection-start-column="81" selection-end-line="94" selection-end-column="81" />
+          <folding>
+            <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
+            <element signature="n#select#5;n#mapper#0;n#!!top" />
+            <element signature="n#select#6;n#mapper#0;n#!!top" />
+            <element signature="n#select#7;n#mapper#0;n#!!top" />
+            <element signature="n#select#8;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/JobController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="182" column="56" lean-forward="true" selection-start-line="182" selection-start-column="56" selection-end-line="182" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/controller/SeminarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="80" column="35" lean-forward="true" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/ISeminarService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/job/service/impl/SeminarServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeliveryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="103" column="44" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
+          <folding>
+            <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="n#select#3;n#mapper#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

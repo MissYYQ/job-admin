@@ -180,6 +180,7 @@ public class JobController {
         j.setKeywords(jsonObject.getString("keywords"));
         j.setIndustry(jsonObject.getString("industry"));
         j.setKind(jsonObject.getInteger("kind"));
+        j.setDeadline(jsonObject.getString("deadline"));
         int i = jobService.add(j);
         return i;
     }

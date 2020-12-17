@@ -17,4 +17,6 @@ public interface ISeminarService {
     int delete(Integer id);
 
     int add(Seminar s);
+
+    int update(Seminar s);
 }

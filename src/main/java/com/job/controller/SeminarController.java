@@ -67,4 +67,19 @@ public class SeminarController {
         return i;
     }
 
+    @RequestMapping("/update")
+    @ResponseBody
+    public int update(Integer id,Integer companyId,String seminar){
+        JSONObject jsonObject = JSON.parseObject(seminar);
+        Seminar s = new Seminar();
+        s.setId(id);
+        s.setCompanyId(companyId);
+        s.setSchool(jsonObject.getString("school"));
+        s.setLocation(jsonObject.getString("location"));
+        s.setDate(jsonObject.getString("date"));
+        s.setTime(jsonObject.getString("time"));
+        int i = seminarService.update(s);
+        return i;
+    }
+
 }
