@@ -1,5 +1,8 @@
 package com.job.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.job.pojo.Delivery;
 import com.job.service.IDeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.Console;
+import java.lang.reflect.Array;
 import java.util.List;
 
 @Controller
@@ -53,23 +58,38 @@ public class DeliveryController {
 
     @ResponseBody
     @RequestMapping("/pass")
-    public int pass(Integer id){
-        int i = deliveryService.pass(id);
-        return i;
+    public int pass(String idArr){
+        JSONArray jsonObject = JSON.parseArray(idArr);
+        int p = 0;
+        for (int i = 0; i < jsonObject.size(); i++) {
+            Integer n = jsonObject.getInteger(i);
+            p = deliveryService.pass(n);
+        }
+        return p;
     }
 
     @ResponseBody
     @RequestMapping("/fail")
-    public int fail(Integer id){
-        int i = deliveryService.fail(id);
-        return i;
+    public int fail(String idArr){
+        JSONArray jsonObject = JSON.parseArray(idArr);
+        int p = 0;
+        for (int i = 0; i < jsonObject.size(); i++) {
+            Integer n = jsonObject.getInteger(i);
+            p = deliveryService.fail(n);
+        }
+        return p;
     }
 
     @ResponseBody
     @RequestMapping("/interview")
-    public int interview(Integer id){
-        int i = deliveryService.interview(id);
-        return i;
+    public int interview(String idArr){
+        JSONArray jsonObject = JSON.parseArray(idArr);
+        int p = 0;
+        for (int i = 0; i < jsonObject.size(); i++) {
+            Integer n = jsonObject.getInteger(i);
+            p = deliveryService.interview(n);
+        }
+        return p;
     }
 
     @ResponseBody

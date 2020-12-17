@@ -1,6 +1,7 @@
 package com.job.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.job.pojo.Interview;
 import com.job.service.IInterviewService;
@@ -41,18 +42,23 @@ public class InterviewController {
 
     @ResponseBody
     @RequestMapping("/add")
-    public int add(Integer companyId,Integer userId,Integer jobId,String addInterview){
+    public int add(Integer companyId, String userIdArr, String jobIdArr, String addInterview){
         JSONObject jsonObject = JSON.parseObject(addInterview);
         Interview interview = new Interview();
         interview.setCompanyId(companyId);
-        interview.setUserId(userId);
-        interview.setJobId(jobId);
         interview.setDate(jsonObject.getString("date"));
         interview.setTime(jsonObject.getString("time"));
         interview.setRegion(jsonObject.getString("region"));
         interview.setDetailedaddress(jsonObject.getString("detailedaddress"));
-        int i = interviewService.add(interview);
-        return i;
+        JSONArray uObject = JSON.parseArray(userIdArr);
+        JSONArray jObject = JSON.parseArray(userIdArr);
+        int n = 0;
+        for (int i = 0; i < uObject.size(); i++) {
+            interview.setUserId(uObject.getInteger(i));
+            interview.setJobId(jObject.getInteger(i));
+            n = interviewService.add(interview);
+        }
+        return n;
     }
 
 
