@@ -24,6 +24,8 @@ public class Interview {
 
     private Integer jobId;
 
+    private Integer companyId;
+
     private Job job;
 
     private Company company;

@@ -41,9 +41,10 @@ public class InterviewController {
 
     @ResponseBody
     @RequestMapping("/add")
-    public int add(Integer userId,Integer jobId,String addInterview){
+    public int add(Integer companyId,Integer userId,Integer jobId,String addInterview){
         JSONObject jsonObject = JSON.parseObject(addInterview);
         Interview interview = new Interview();
+        interview.setCompanyId(companyId);
         interview.setUserId(userId);
         interview.setJobId(jobId);
         interview.setDate(jsonObject.getString("date"));

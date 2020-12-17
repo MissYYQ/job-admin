@@ -8,6 +8,7 @@
     <result column="region" property="region" jdbcType="VARCHAR" />
     <result column="detailedAddress" property="detailedaddress" jdbcType="VARCHAR" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="company_id" property="companyId" jdbcType="INTEGER" />
     <result column="job_id" property="jobId" jdbcType="INTEGER" />
     <!--  关联job表-->
     <association property="job" javaType="com.job.pojo.Job" columnPrefix="j_">
@@ -32,10 +33,10 @@
   </delete>
   <insert id="insert" parameterType="com.job.pojo.Interview" useGeneratedKeys="true" keyProperty="id" >
     insert into interview (date, time, region, 
-      detailedAddress, user_id, job_id
+      detailedAddress, user_id, company_id, job_id
       )
-    values (#{date,jdbcType=CHAR}, #{time,jdbcType=CHAR}, #{region,jdbcType=VARCHAR}, 
-      #{detailedaddress,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{jobId,jdbcType=INTEGER}
+    values (#{date}, #{time}, #{region},
+      #{detailedaddress}, #{userId}, #{companyId}, #{jobId}
       )
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.job.pojo.Interview" >
@@ -45,16 +46,17 @@
       region = #{region,jdbcType=VARCHAR},
       detailedAddress = #{detailedaddress,jdbcType=VARCHAR},
       user_id = #{userId,jdbcType=INTEGER},
+      company_id = #{companyId,jdbcType=INTEGER},
       job_id = #{jobId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select id, date, time, region, detailedAddress, user_id, job_id
+    select *
     from interview
     where id = #{id,jdbcType=INTEGER}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
-    select id, date, time, region, detailedAddress, user_id, job_id
+    select *
     from interview
   </select>
   <select id="selectCountByUserId" resultType="java.lang.Integer">
@@ -64,17 +66,8 @@
   </select>
   <select id="selectCountByCompanyId" resultType="java.lang.Integer">
     select count(*)
-    from interview i
-    left join (
-      select j.id as jobId,
-         j.name as jobName,
-         c.name as companyName
-      from job j
-      left join company c
-      on j.company_id = c.id
-      where c.id = #{companyId}
-    ) cj
-    on i.job_id = cj.jobId
+    from interview
+    where company_id = #{companyId}
   </select>
   <select id="selectByUserId" resultMap="BaseResultMap">
     select i.*,
@@ -102,6 +95,6 @@
     on j.company_id = c.id
     left join delivery d
     on j.id = d.job_id
-    where c.id = #{companyId}
+    where i.company_id = #{companyId}
   </select>
 </mapper>
