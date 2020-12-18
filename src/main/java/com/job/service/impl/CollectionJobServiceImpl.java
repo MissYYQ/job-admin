@@ -12,7 +12,6 @@ public class CollectionJobServiceImpl implements ICollectionJobService {
     @Autowired
     private CollectionJobMapper collectionJobMapper;
 
-
     @Override
     public boolean isCollection(Integer userId, Integer jobId) {
         int collection = collectionJobMapper.isCollection(userId, jobId);
