@@ -16,13 +16,5 @@ public interface ChatMapper {
 
     int updateByPrimaryKey(Chat record);
 
-    int selectCountByStudentId(Integer studentId);
-
-    int selectCountByCompanyId(Integer companyId);
-
-    List<Chat> selectAllByStudentId(Integer studentId);
-
-    List<Chat> selectAllByCompanyId(Integer companyId);
-
     List<Chat> selectOne(@Param("companyId") Integer companyId, @Param("studentId") Integer studentId);
 }

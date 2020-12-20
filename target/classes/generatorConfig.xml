@@ -53,7 +53,7 @@
 
         <!--配置表名 和 实体类名-->
 
-<!--        <table tableName="collectionuser" domainObjectName="CollectionUser">-->
+<!--        <table tableName="news" domainObjectName="News">-->
 <!--            <property name="useActualColumnNames" value="false"/>-->
 <!--            <property name="constructorBased" value="false"/>-->
 <!--            <generatedKey column="id" sqlStatement="JDBC"/>-->

@@ -17,17 +17,10 @@ public class ChatController {
     private IChatService chatService;
 
     @ResponseBody
-    @RequestMapping("/countStudentId")
-    public int countStudentId(Integer studentId){
-        int count = chatService.countStudentId(studentId);
-        return count;
-    }
-
-    @ResponseBody
-    @RequestMapping("/countCompanyId")
-    public int countCompanyId(Integer companyId){
-        int count = chatService.countCompanyId(companyId);
-        return count;
+    @RequestMapping("/one")
+    public List<Chat> one(Integer companyId,Integer studentId){
+        List<Chat> chatList = chatService.one(companyId,studentId);
+        return chatList;
     }
 
     @ResponseBody
@@ -41,26 +34,5 @@ public class ChatController {
         chat.setSender(sender);
         int i = chatService.add(chat);
         return i;
-    }
-
-    @ResponseBody
-    @RequestMapping("/allStudentId")
-    public List<Chat> allStudentId(Integer studentId){
-        List<Chat> chatList = chatService.allStudentId(studentId);
-        return chatList;
-    }
-
-    @ResponseBody
-    @RequestMapping("/allCompanyId")
-    public List<Chat> allCompanyId(Integer companyId){
-        List<Chat> chatList = chatService.allCompanyId(companyId);
-        return chatList;
-    }
-
-    @ResponseBody
-    @RequestMapping("/one")
-    public List<Chat> one(Integer companyId,Integer studentId){
-        List<Chat> chatList = chatService.one(companyId,studentId);
-        return chatList;
     }
 }
