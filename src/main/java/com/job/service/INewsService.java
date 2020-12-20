@@ -15,4 +15,7 @@ public interface INewsService {
 
     List<News> allCompanyId(Integer companyId);
 
+    News searchOne(Integer studentId, Integer companyId);
+
+    int updateLast(News news);
 }

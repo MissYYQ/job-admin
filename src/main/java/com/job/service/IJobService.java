@@ -31,4 +31,8 @@ public interface IJobService {
     int add(Job j);
 
     int delete(Integer id);
+
+    List<Job> getByIntentionJob(String job, String city);
+
+    List<Job> getNotIntention(String job, String city);
 }

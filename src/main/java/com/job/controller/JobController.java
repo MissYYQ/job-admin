@@ -2,7 +2,9 @@ package com.job.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.job.pojo.IntentionJob;
 import com.job.pojo.Job;
+import com.job.service.IIntentionJobService;
 import com.job.service.IJobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,15 +20,29 @@ public class JobController {
     @Autowired
     private IJobService jobService;
 
+    @Autowired
+    private IIntentionJobService intentionJobService;
+
     /**
      * 获取所有职位
      * @return 所有职位的集合
      */
     @ResponseBody
     @RequestMapping("/all")
-    public List<Job> getAll(){
-        List<Job> jobList = jobService.getAll();
-        return jobList;
+    public List<Job> getAll(Integer userId){
+        IntentionJob intentionJob = intentionJobService.searchByUserId(userId);
+        if (intentionJob == null){
+            List<Job> jobList = jobService.getAll();
+            return jobList;
+        }else {
+            //根据求职期望排列职位列表
+            String job = intentionJob.getJob();
+            String city = intentionJob.getCity();
+            List<Job> jobList = jobService.getByIntentionJob(job, city);
+            List<Job> job2 = jobService.getNotIntention(job, city);
+            jobList.addAll(job2);
+            return jobList;
+        }
     }
 
     /**

@@ -91,4 +91,16 @@ public class JobServiceImpl  implements IJobService {
         return i;
     }
 
+    @Override
+    public List<Job> getByIntentionJob(String job, String city) {
+        List<Job> jobList = jobMapper.selectByIntentionJob(job, city);
+        return jobList;
+    }
+
+    @Override
+    public List<Job> getNotIntention(String job, String city) {
+        List<Job> jobList = jobMapper.selectNotIntention(job, city);
+        return jobList;
+    }
+
 }

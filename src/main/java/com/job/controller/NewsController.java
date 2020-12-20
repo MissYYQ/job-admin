@@ -39,8 +39,16 @@ public class NewsController {
         news.setJobId(jobId);
         news.setLastmessage(lastMessage);
         news.setLastdate(lastDate);
-        int i = newsService.add(news);
-        return i;
+        News one = newsService.searchOne(studentId, companyId);
+        if (one != null){
+            //更新last
+            int i = newsService.updateLast(news);
+            return i;
+        } else {
+            //插入
+            int i = newsService.add(news);
+            return i;
+        }
     }
 
     @ResponseBody

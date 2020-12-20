@@ -44,4 +44,16 @@ public class NewsServiceImpl implements INewsService {
         return newsList;
     }
 
+    @Override
+    public News searchOne(Integer studentId, Integer companyId) {
+        News news = newsMapper.selectOne(studentId, companyId);
+        return news;
+    }
+
+    @Override
+    public int updateLast(News news) {
+        int i = newsMapper.updateLast(news);
+        return i;
+    }
+
 }

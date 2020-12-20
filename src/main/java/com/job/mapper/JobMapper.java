@@ -1,6 +1,8 @@
 package com.job.mapper;
 
 import com.job.pojo.Job;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface JobMapper {
@@ -30,4 +32,7 @@ public interface JobMapper {
 
     int selectCountByCompanyId(Integer companyId);
 
+    List<Job> selectByIntentionJob(@Param("job") String job, @Param("city") String city);
+
+    List<Job> selectNotIntention(@Param("job") String job, @Param("city") String city);
 }
