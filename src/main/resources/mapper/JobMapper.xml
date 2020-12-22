@@ -192,7 +192,34 @@
     from job j
     left join company c
     on j.company_id = c.id
-    where j.name like concat('%',#{job},'%') or j.city like concat('%',#{city},'%')
+    where j.name like concat('%',#{job},'%') and j.city like concat('%',#{city},'%')
+    order by j.id desc
+  </select>
+  <select id="selectJob"  resultMap="BaseResultMap">
+    select j.*,
+           c.logoUrl as c_logourl,
+           c.`name` as c_name,
+           c.industry as c_industry,
+           c.size as c_size,
+           c.financingStage as c_financingstage
+    from job j
+    left join company c
+    on j.company_id = c.id
+    where j.name like concat('%',#{job},'%') and j.city not like concat('%',#{city},'%')
+    order by j.id desc
+  </select>
+  <select id="selectCity" resultMap="BaseResultMap">
+          select j.*,
+           c.logoUrl as c_logourl,
+           c.`name` as c_name,
+           c.industry as c_industry,
+           c.size as c_size,
+           c.financingStage as c_financingstage
+    from job j
+    left join company c
+    on j.company_id = c.id
+    where j.name not like concat('%',#{job},'%') and j.city like concat('%',#{city},'%')
+    order by j.id desc
   </select>
   <select id="selectNotIntention" resultMap="BaseResultMap">
    select j.*,
@@ -205,5 +232,6 @@
     left join company c
     on j.company_id = c.id
     where j.name not like concat('%',#{job},'%') and j.city not like concat('%',#{city},'%')
+    order by j.id desc
   </select>
 </mapper>

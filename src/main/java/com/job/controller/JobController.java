@@ -38,9 +38,18 @@ public class JobController {
             //根据求职期望排列职位列表
             String job = intentionJob.getJob();
             String city = intentionJob.getCity();
+            //职位、城市均符合
             List<Job> jobList = jobService.getByIntentionJob(job, city);
-            List<Job> job2 = jobService.getNotIntention(job, city);
-            jobList.addAll(job2);
+            //职位符合、城市不符合
+            List<Job> jobList2 = jobService.getByJob(job, city);
+            //职位不符合、城市符合
+            List<Job> jobList3 = jobService.getByCity(job, city);
+            //职位城市均不符合
+            List<Job> jobList4 = jobService.getNotIntention(job, city);
+            //合并
+            jobList.addAll(jobList2);
+            jobList.addAll(jobList3);
+            jobList.addAll(jobList4);
             return jobList;
         }
     }

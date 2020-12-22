@@ -35,4 +35,8 @@ public interface JobMapper {
     List<Job> selectByIntentionJob(@Param("job") String job, @Param("city") String city);
 
     List<Job> selectNotIntention(@Param("job") String job, @Param("city") String city);
+
+    List<Job> selectJob(@Param("job") String job, @Param("city") String city);
+
+    List<Job> selectCity(@Param("job") String job, @Param("city") String city);
 }

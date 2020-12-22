@@ -35,4 +35,8 @@ public interface IJobService {
     List<Job> getByIntentionJob(String job, String city);
 
     List<Job> getNotIntention(String job, String city);
+
+    List<Job> getByJob(String job, String city);
+
+    List<Job> getByCity(String job, String city);
 }

@@ -103,4 +103,16 @@ public class JobServiceImpl  implements IJobService {
         return jobList;
     }
 
+    @Override
+    public List<Job> getByJob(String job, String city) {
+        List<Job> jobList = jobMapper.selectJob(job,city);
+        return jobList;
+    }
+
+    @Override
+    public List<Job> getByCity(String job, String city) {
+        List<Job> jobList = jobMapper.selectCity(job,city);
+        return jobList;
+    }
+
 }
