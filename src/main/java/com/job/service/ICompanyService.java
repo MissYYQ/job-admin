@@ -21,4 +21,6 @@ public interface ICompanyService {
     int insertCompany(Company c);
 
     int updateCompany(Company c);
+
+    int getCount();
 }

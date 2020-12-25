@@ -13,4 +13,7 @@ public interface JobStrategyMapper {
     List<JobStrategy> selectAll();
 
     int updateByPrimaryKey(JobStrategy record);
+
+    int selectCount();
+
 }

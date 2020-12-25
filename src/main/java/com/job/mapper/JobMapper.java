@@ -39,4 +39,7 @@ public interface JobMapper {
     List<Job> selectJob(@Param("job") String job, @Param("city") String city);
 
     List<Job> selectCity(@Param("job") String job, @Param("city") String city);
+
+    int selectCount();
+
 }

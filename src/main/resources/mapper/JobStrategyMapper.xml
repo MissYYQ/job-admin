@@ -33,4 +33,8 @@
     select id, title, content, kind
     from jobstrategy
   </select>
+  <select id="selectCount" resultType="java.lang.Integer">
+    select count(*)
+    from jobstrategy
+  </select>
 </mapper>

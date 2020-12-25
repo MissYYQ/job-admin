@@ -19,4 +19,10 @@ public class JobStrategyServiceImpl implements IJobStrategyService {
         List<JobStrategy> jobStrategies = jobStrategyMapper.selectAll();
         return jobStrategies;
     }
+
+    @Override
+    public int getCount() {
+        int count = jobStrategyMapper.selectCount();
+        return count;
+    }
 }

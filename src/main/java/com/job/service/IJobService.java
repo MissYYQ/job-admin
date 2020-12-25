@@ -39,4 +39,6 @@ public interface IJobService {
     List<Job> getByJob(String job, String city);
 
     List<Job> getByCity(String job, String city);
+
+    int getCount();
 }

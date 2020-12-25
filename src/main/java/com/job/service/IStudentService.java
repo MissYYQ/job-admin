@@ -17,4 +17,7 @@ public interface IStudentService {
     List<Student> search(String key);
 
     List<Student> selectCollectUserByCompanyId(Integer companyId);
+
+    int getCount();
+
 }

@@ -23,4 +23,6 @@ public interface CompanyMapper {
     Company selectByUserId(Integer userId);
 
     int updateByUserId(Company c);
+
+    int selectCount();
 }

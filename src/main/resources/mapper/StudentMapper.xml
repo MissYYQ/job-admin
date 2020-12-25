@@ -98,14 +98,14 @@
     where user_id = #{userId}
   </select>
   <select id="selectAllForCompanyIndex" resultMap="BaseResultMap">
-    select ij.id as ij_id,ij.job as ij_job,ij.salary as ij_salary,su.*
-    from intentionjob ij
-    left join (
-                 select s.*
-                 from student s
-                 left join `user` u
-                 on s.user_id = u.id
-              ) su
+    select su.*,ij.id as ij_id,ij.job as ij_job,ij.salary as ij_salary
+    from (
+         select s.*
+         from student s
+         left join `user` u
+         on s.user_id = u.id
+       ) su
+    left join intentionjob ij
     on ij.user_id = su.user_id
   </select>
   <select id="search" resultMap="BaseResultMap">
@@ -129,5 +129,9 @@
 		where company_id = #{companyId}
 	) cu
 	on s.user_id = cu.user_id
+  </select>
+  <select id="selectCount" resultType="java.lang.Integer">
+    select count(*)
+    from student
   </select>
 </mapper>

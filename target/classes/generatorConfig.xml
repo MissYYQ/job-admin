@@ -53,7 +53,7 @@
 
         <!--配置表名 和 实体类名-->
 
-<!--        <table tableName="news" domainObjectName="News">-->
+<!--        <table tableName="admin" domainObjectName="Admin">-->
 <!--            <property name="useActualColumnNames" value="false"/>-->
 <!--            <property name="constructorBased" value="false"/>-->
 <!--            <generatedKey column="id" sqlStatement="JDBC"/>-->

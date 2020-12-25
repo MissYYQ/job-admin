@@ -234,4 +234,8 @@
     where j.name not like concat('%',#{job},'%') and j.city not like concat('%',#{city},'%')
     order by j.id desc
   </select>
+  <select id="selectCount" resultType="java.lang.Integer">
+    select count(*)
+    from job
+  </select>
 </mapper>

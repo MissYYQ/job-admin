@@ -115,4 +115,10 @@ public class JobServiceImpl  implements IJobService {
         return jobList;
     }
 
+    @Override
+    public int getCount() {
+        int count = jobMapper.selectCount();
+        return count;
+    }
+
 }

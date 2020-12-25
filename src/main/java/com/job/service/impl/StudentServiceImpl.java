@@ -49,4 +49,10 @@ public class StudentServiceImpl implements IStudentService {
         List<Student> studentList = studentMapper.selectCollectUserByCompanyId(companyId);
         return studentList;
     }
+
+    @Override
+    public int getCount() {
+        int count = studentMapper.selectCount();
+        return count;
+    }
 }

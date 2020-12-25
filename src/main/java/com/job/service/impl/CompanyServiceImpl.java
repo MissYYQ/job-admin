@@ -60,4 +60,10 @@ public class CompanyServiceImpl implements ICompanyService {
         int i = companyMapper.updateByUserId(c);
         return i;
     }
+
+    @Override
+    public int getCount() {
+        int count = companyMapper.selectCount();
+        return count;
+    }
 }
