@@ -37,4 +37,6 @@ public class Company {
     private Integer userId;
 
     private Integer pageviews;
+
+    private Integer status;
 }

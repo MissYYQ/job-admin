@@ -16,6 +16,7 @@
     <result column="industry" property="industry" jdbcType="VARCHAR" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="pageviews" property="pageviews" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="BIT" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from company
@@ -72,6 +73,21 @@
       pageviews = #{pageviews}
     where user_id = #{userId}
   </update>
+  <update id="updateStatusPass">
+    update company
+    set status = 1
+    where id = #{id}
+  </update>
+  <update id="updateStatusDisable">
+    update company
+    set status = 2
+    where id = #{id}
+  </update>
+  <update id="updateStatusEnable">
+    update company
+    set status = 1
+    where id = #{id}
+  </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select *
     from company
@@ -80,15 +96,19 @@
   <select id="selectAll" resultMap="BaseResultMap" >
     select *
     from company
+    where status = 1
+    order by id desc
   </select>
   <select id="selectHotCompany" resultType="com.job.pojo.Company">
     select *
     from company
+    where status = 1
     order by pageviews desc
   </select>
   <select id="selectSearchHotCompany" resultType="com.job.pojo.Company">
     select *
     from company
+    where status = 1
     where name like concat('%',#{key},'%')
   </select>
   <select id="selectByUserId" resultType="com.job.pojo.Company">
@@ -99,5 +119,10 @@
   <select id="selectCount" resultType="java.lang.Integer">
     select count(*)
     from company
+  </select>
+  <select id="selectAllForAdmin" resultMap="BaseResultMap">
+    select *
+    from company
+    order by id desc
   </select>
 </mapper>

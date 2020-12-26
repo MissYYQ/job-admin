@@ -23,4 +23,14 @@ public interface ICompanyService {
     int updateCompany(Company c);
 
     int getCount();
+
+    int updateStatusPass(Integer id);
+
+    List<Company> getAllForAdmin();
+
+    int pass(Integer id);
+
+    int disable(Integer id);
+
+    int enable(Integer id);
 }

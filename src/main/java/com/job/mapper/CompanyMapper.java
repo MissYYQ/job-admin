@@ -25,4 +25,12 @@ public interface CompanyMapper {
     int updateByUserId(Company c);
 
     int selectCount();
+
+    List<Company> selectAllForAdmin();
+
+    int updateStatusPass(Integer id);
+
+    int updateStatusDisable(Integer id);
+
+    int updateStatusEnable(Integer id);
 }

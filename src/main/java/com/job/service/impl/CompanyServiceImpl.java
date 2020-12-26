@@ -66,4 +66,35 @@ public class CompanyServiceImpl implements ICompanyService {
         int count = companyMapper.selectCount();
         return count;
     }
+
+    @Override
+    public int updateStatusPass(Integer id) {
+        int i = companyMapper.updateStatusPass(id);
+        return i;
+    }
+
+    @Override
+    public List<Company> getAllForAdmin() {
+        List<Company> companyList = companyMapper.selectAllForAdmin();
+        return companyList;
+    }
+
+    @Override
+    public int pass(Integer id) {
+        int i = companyMapper.updateStatusPass(id);
+        return i;
+    }
+
+    @Override
+    public int disable(Integer id) {
+        int i = companyMapper.updateStatusDisable(id);
+        return i;
+    }
+
+    @Override
+    public int enable(Integer id) {
+        int i = companyMapper.updateStatusEnable(id);
+        return i;
+    }
+
 }
