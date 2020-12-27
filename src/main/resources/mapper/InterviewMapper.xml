@@ -97,4 +97,8 @@
     on j.id = d.job_id
     where i.company_id = #{companyId}
   </select>
+  <select id="selectCount" resultType="java.lang.Integer">
+    select count(*)
+    from interview
+  </select>
 </mapper>

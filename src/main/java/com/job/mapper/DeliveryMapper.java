@@ -33,4 +33,6 @@ public interface DeliveryMapper {
     int accept(Integer id);
 
     int refuse(Integer id);
+
+    int selectCount();
 }

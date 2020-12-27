@@ -7,6 +7,7 @@ import com.job.pojo.Delivery;
 import com.job.service.IDeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -23,17 +24,17 @@ public class DeliveryController {
 
     @ResponseBody
     @RequestMapping("/deliveryCount")
-    public int deliveryCount(Integer userId){
+    public int deliveryCount(Integer userId) {
         int count = deliveryService.deliveryCount(userId);
         return count;
     }
 
     @ResponseBody
     @RequestMapping("/deliveryJob")
-    public Boolean deliveryJob(Integer userId,Integer jobId,String deliveryTime){
-        deliveryService.deliveryJob(userId,jobId,deliveryTime);
+    public Boolean deliveryJob(Integer userId, Integer jobId, String deliveryTime) {
+        deliveryService.deliveryJob(userId, jobId, deliveryTime);
         int deliveryJob = deliveryService.isDelivery(userId, jobId);
-        if (deliveryJob != 0){
+        if (deliveryJob != 0) {
             return true;
         }
         return false;
@@ -41,9 +42,9 @@ public class DeliveryController {
 
     @ResponseBody
     @RequestMapping("/isDelivery")
-    public Boolean deliveryJob(Integer userId,Integer jobId){
+    public Boolean deliveryJob(Integer userId, Integer jobId) {
         int deliveryJob = deliveryService.isDelivery(userId, jobId);
-        if (deliveryJob != 0){
+        if (deliveryJob != 0) {
             return true;
         }
         return false;
@@ -51,14 +52,14 @@ public class DeliveryController {
 
     @ResponseBody
     @RequestMapping("/deal")
-    public List<Delivery> deal(Integer companyId){
+    public List<Delivery> deal(Integer companyId) {
         List<Delivery> deliveryList = deliveryService.deal(companyId);
         return deliveryList;
     }
 
     @ResponseBody
     @RequestMapping("/pass")
-    public int pass(String idArr){
+    public int pass(String idArr) {
         JSONArray jsonObject = JSON.parseArray(idArr);
         int p = 0;
         for (int i = 0; i < jsonObject.size(); i++) {
@@ -70,7 +71,7 @@ public class DeliveryController {
 
     @ResponseBody
     @RequestMapping("/fail")
-    public int fail(String idArr){
+    public int fail(String idArr) {
         JSONArray jsonObject = JSON.parseArray(idArr);
         int p = 0;
         for (int i = 0; i < jsonObject.size(); i++) {
@@ -82,7 +83,7 @@ public class DeliveryController {
 
     @ResponseBody
     @RequestMapping("/interview")
-    public int interview(String idArr){
+    public int interview(String idArr) {
         JSONArray jsonObject = JSON.parseArray(idArr);
         int p = 0;
         for (int i = 0; i < jsonObject.size(); i++) {
@@ -94,15 +95,24 @@ public class DeliveryController {
 
     @ResponseBody
     @RequestMapping("/accept")
-    public int accept(Integer id){
+    public int accept(Integer id) {
         int i = deliveryService.accept(id);
         return i;
     }
 
     @ResponseBody
     @RequestMapping("/refuse")
-    public int refuse(Integer id){
+    public int refuse(Integer id) {
         int i = deliveryService.refuse(id);
         return i;
     }
+
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping("/count")
+    public int count() {
+        int count = deliveryService.count();
+        return count;
+    }
+
 }

@@ -66,4 +66,10 @@ public class DeliveryServiceImpl implements IDeliveryService {
         int i = deliveryMapper.refuse(id);
         return i;
     }
+
+    @Override
+    public int count() {
+        int i = deliveryMapper.selectCount();
+        return i;
+    }
 }

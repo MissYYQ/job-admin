@@ -24,4 +24,6 @@ public interface IDeliveryService {
     int accept(Integer id);
 
     int refuse(Integer id);
+
+    int count();
 }

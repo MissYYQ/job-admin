@@ -7,6 +7,7 @@ import com.job.pojo.Interview;
 import com.job.service.IInterviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -67,6 +68,14 @@ public class InterviewController {
     public List<Interview> selectByCompanyId (Integer companyId){
         List<Interview> interviewList = interviewService.selectByCompanyId(companyId);
         return interviewList;
+    }
+
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping("/count")
+    public int count(){
+        int count = interviewService.count();
+        return count;
     }
 
 }

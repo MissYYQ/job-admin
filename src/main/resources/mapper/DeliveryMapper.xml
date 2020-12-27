@@ -107,4 +107,8 @@
 	) dj
     left join resumefile r on dj.user_id = r.user_id
   </select>
+  <select id="selectCount" resultType="java.lang.Integer">
+    select count(*)
+    from delivery
+  </select>
 </mapper>

@@ -14,4 +14,6 @@ public interface IInterviewService {
     int add(Interview interview);
 
     List<Interview> selectByCompanyId(Integer companyId);
+
+    int count();
 }

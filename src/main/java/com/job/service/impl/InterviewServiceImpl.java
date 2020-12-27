@@ -43,4 +43,10 @@ public class InterviewServiceImpl implements IInterviewService {
         List<Interview> interviewList = interviewMapper.selectByCompanyId(companyId);
         return interviewList;
     }
+
+    @Override
+    public int count() {
+        int count = interviewMapper.selectCount();
+        return count;
+    }
 }
