@@ -26,6 +26,7 @@
       <result column="region" property="region" />
       <result column="detailedAddress" property="detailedaddress" />
       <result column="welfare" property="welfare" />
+      <result column="status" property="status" jdbcType="BIT" />
     </association>
     <!--  关联collectionjob表-->
     <association property="collectionjob" javaType="com.job.pojo.CollectionJob" >
@@ -102,6 +103,7 @@
     from job j
     left join company c
     on j.company_id = c.id
+    where c.status = 1
     order by j.id desc
   </select>
   <select id="selectJobByCompanyId" resultType="com.job.pojo.Job">
@@ -119,6 +121,7 @@
     from job j
     left join company c
     on j.company_id = c.id
+    where c.status = 1
     order by j.pageviews desc
   </select>
   <select id="selectSearchJob" resultMap="BaseResultMap">
@@ -131,7 +134,7 @@
     from job j
     left join company c
     on j.company_id = c.id
-    where j.name like concat('%',#{key},'%') or c.name like concat('%',#{key},'%')
+    where (j.name like concat('%',#{key},'%') or c.name like concat('%',#{key},'%')) and c.status = 1
   </select>
   <select id="selectSearchHotJob" resultMap="BaseResultMap">
     select j.*,
@@ -143,7 +146,7 @@
     from job j
     left join company c
     on j.company_id = c.id
-    where j.name like concat('%',#{key},'%')
+    where j.name like concat('%',#{key},'%') and c.status = 1
     order by j.pageviews desc
   </select>
   <select id="selectCollectJob" resultMap="BaseResultMap">
@@ -192,7 +195,7 @@
     from job j
     left join company c
     on j.company_id = c.id
-    where j.name like concat('%',#{job},'%') and j.city like concat('%',#{city},'%')
+    where j.name like concat('%',#{job},'%') and j.city like concat('%',#{city},'%') and c.status = 1
     order by j.id desc
   </select>
   <select id="selectJob"  resultMap="BaseResultMap">
@@ -205,7 +208,7 @@
     from job j
     left join company c
     on j.company_id = c.id
-    where j.name like concat('%',#{job},'%') and j.city not like concat('%',#{city},'%')
+    where j.name like concat('%',#{job},'%') and j.city not like concat('%',#{city},'%') and c.status = 1
     order by j.id desc
   </select>
   <select id="selectCity" resultMap="BaseResultMap">
@@ -218,7 +221,7 @@
     from job j
     left join company c
     on j.company_id = c.id
-    where j.name not like concat('%',#{job},'%') and j.city like concat('%',#{city},'%')
+    where j.name not like concat('%',#{job},'%') and j.city like concat('%',#{city},'%') and c.status = 1
     order by j.id desc
   </select>
   <select id="selectNotIntention" resultMap="BaseResultMap">
@@ -231,7 +234,7 @@
     from job j
     left join company c
     on j.company_id = c.id
-    where j.name not like concat('%',#{job},'%') and j.city not like concat('%',#{city},'%')
+    where j.name not like concat('%',#{job},'%') and j.city not like concat('%',#{city},'%') and c.status = 1
     order by j.id desc
   </select>
   <select id="selectCount" resultType="java.lang.Integer">
