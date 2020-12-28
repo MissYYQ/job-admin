@@ -52,7 +52,7 @@ public class InterviewController {
         interview.setRegion(jsonObject.getString("region"));
         interview.setDetailedaddress(jsonObject.getString("detailedaddress"));
         JSONArray uObject = JSON.parseArray(userIdArr);
-        JSONArray jObject = JSON.parseArray(userIdArr);
+        JSONArray jObject = JSON.parseArray(jobIdArr);
         int n = 0;
         for (int i = 0; i < uObject.size(); i++) {
             interview.setUserId(uObject.getInteger(i));
